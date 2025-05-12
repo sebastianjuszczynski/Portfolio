@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <div class="header__logo-container">
+                <a href="#home">
+                    <img src="logo.png" alt="Portfolio Logo" class="header__logo-image">
+                </a>
+            </div>
+            <ul class="header__menu">
+                <li class="header__menu-item"><a href="#about" class="header__menu-link">About</a></li>
+                <li class="header__menu-item"><a href="#projects" class="header__menu-link">Projects</a></li>
+                <li class="header__menu-item"><a href="#contact" class="header__menu-link">Contact</a></li>
+            </ul>
+            <div class="header__controls">
+                <button class="header__toggle-theme" aria-label="Toggle dark mode">
+                    🌙
+                </button>
+
+                <select class="header__lang-switch" aria-label="Change language">
+                    <option value="en">EN</option>
+                    <option value="pl">PL</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+    <section class="hero" id="home">
+        <div class="hero__content">
+            <h2 class="hero__title">Welcome to My Portfolio</h2>
+            <p class="hero__subtitle">Showcasing my work and passion for web development</p>
+            <a href="#projects" class="hero__cta-button">View Projects</a>
+        </div>
+        <div class="hero__image-container">
+            <img src="hero-image.jpg" alt="Hero Image" class="hero__image">
+        </div>
+    </section>
+        <section class="about" id="about">
+            <h1 class="about__title">About Me</h1>
+            <p class="about__description">I am a passionate developer eager to build impactful web applications.</p>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2 class="skills__title">Skills</h2>
+            <ul class="skills__list">
+                <li class="skills__item">HTML5</li>
+                <li class="skills__item">CSS3</li>
+                <li class="skills__item">JavaScript</li>
+                <li class="skills__item">React</li>
+                <li class="skills__item">Node.js</li>
+                <li class="skills__item">Git</li>
+                <li class="skills__item">Responsive Design</li>
+            </ul>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2 class="projects__title">Projects</h2>
+            <div class="projects__list">
+                <article class="projects__item">
+                    <h3 class="projects__item-title">Project One</h3>
+                    <p class="projects__item-description">Description of project one.</p>
+                </article>
+                <article class="projects__item">
+                    <h3 class="projects__item-title">Project Two</h3>
+                    <p class="projects__item-description">Description of project two.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="contact__title">Contact</h2>
+            <form class="contact__form">
+                <div class="contact__form-group">
+                    <label for="name" class="contact__label">Name</label>
+                    <input type="text" id="name" class="contact__input" required>
+                </div>
+                <div class="contact__form-group">
+                    <label for="email" class="contact__label">Email</label>
+                    <input type="email" id="email" class="contact__input" required>
+                </div>
+                <div class="contact__form-group">
+                    <label for="message" class="contact__label">Message</label>
+                    <textarea id="message" class="contact__input" required></textarea>
+                </div>
+                <button type="submit" class="contact__button">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2025 MyPortfolio. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
