@@ -3,3 +3,33 @@
 *::before {
     box-sizing: border-box;
 }
+
+:root {
+    --color-primary: #EE2B1B;
+    --color-primary-hover: #D3291B;
+    --color-secondary: #161616;
+    --color-background: #000000;
+    --color-background-scrolled: rgba(0, 0, 0, 0.7);
+    --color-text: #FAFAFA;
+    --color-text-hover: #F0F0F0;
+    --color-text-secondary: #AAAAAA;
+
+    --font-family: 'Inter', sans-serif;
+    --font-family-logo: 'Orbitron', sans-serif;
+    --font-size-base: 16px;
+    --font-size-lg: 1.25rem;
+    --font-size-sm: 0.875rem;
+
+    --breakpoint-mobile: 480px;
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    --transition-base: all 0.5s ease;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
