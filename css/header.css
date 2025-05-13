@@ -1,25 +1,35 @@
+.main {
+    margin-top: 90px;
+}
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     padding: 10px;
-    z-index: 2;
+    z-index: 1;
+    background-color: var(--color-background);
+}
+.header.scrolled {
     background-color: var(--color-background-scrolled);
 }
 .header__nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 0 1rem;
+    gap: 1rem;
     align-items: center;
-    /* gap: 20px; */
 }
 .header__logo-text {
+    margin-right: auto;
     font-family: var(--font-family-logo);
     font-size: var(--font-size-lg);
     color: var(--color-primary);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 2px;
+    z-index: 2;
 }
 .header__menu {
     display: flex;
@@ -29,25 +39,26 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: transparent;
     list-style: none;
     padding: 0;
     margin: 0;
-    /* opacity: 0; */
-    /* transform: translateX(-100%); */
+    opacity: 0;
+    transform: translateY(-120%); 
     transition: var(--transition-base);
-    text-align: center;
     align-items: center;
     justify-content: center;
 }
 .header__menu--open {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
     background-color: var(--color-background);
 }
 .header__menu-item {
     margin: 0;
     padding: 0;
+}
+.header__menu-item.active .header__menu-link {
+  color: var(--color-primary);
 }
 .header__menu-link {
     display: block;
@@ -56,41 +67,12 @@
     font-size: var(--font-size-lg);
     padding: 10px 20px;
 }
-.header__menu-item::after {
+.header__menu-link::after {
     display: none;
 }
 .header__menu-item.active {
     color: var(--color-primary);
 }
-.header__mobile-button {
-    width: 40px;
-    height: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-}
-.hamburger-line {
-    height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
-    transition: transform 0.4s ease, opacity 0.3s ease;
-}
-.header__mobile-button.open .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translateY(14px);
-}
-
-.header__mobile-button.open .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.header__mobile-button.open .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translateY(-14px);
-}
-
 .header__controls {
   display: flex;
   align-items: center;
@@ -105,6 +87,7 @@
   cursor: pointer;
   color: var(--color-text);
   transition: color 0.3s ease;
+  z-index: 1;
 }
 .header__toggle-theme:hover,
 .header__toggle-theme:focus {
@@ -122,6 +105,37 @@
   transition: border-color 0.3s ease, color 0.3s ease;
   position: relative;     
 }
+.header__mobile-button {
+    width: 50px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+.hamburger-line {
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.header__mobile-button.open .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translateY(18px);
+}
+
+.header__mobile-button.open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.header__mobile-button.open .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translateY(-18px);
+}
+
+
 @media (min-width: 768px) {
   .header__mobile-button {
     display: none;
@@ -131,16 +145,33 @@
     flex-direction: row;
     transform: none;
     opacity: 1;
-    background: transparent;
+    /* background: transparent; */
   }
   .header__menu-link {
-    padding: 0 1rem;
+    position: relative;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
   }
+   .header__menu-link::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--color-primary);
+        transform: scaleX(0);
+        transform-origin: bottom left;
+        transition: transform 0.3s ease-in-out;
+    }
+   .header__menu-link:hover::after {
+        transform: scaleX(1);
+    }
 }
 
-.main {
-    margin-top: 90px;
-}
+
 
 
 
