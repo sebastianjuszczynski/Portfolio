@@ -26,11 +26,22 @@
 
     --transition-base: all 0.5s ease;
 }
+.light-theme {
+    --color-primary: #edfcf5;
+    --color-primary-hover: #d3f8e5;
+    --color-secondary: #73e2b7;
+    --color-background: #159f73;
+    --color-background-scrolled: rgba(21, 159, 115, 0.7);
+    --color-text: #042a21;
+    --color-text-hover: #094b3b;
+    --color-text-secondary: #097356;
+}
 
 body {
     font-family: var(--font-family);
     background-color: var(--color-background);
     color: var(--color-text);
+    transition: background-color 0.4s, color 0.4s;
 }
 html {
     scroll-behavior: smooth;
