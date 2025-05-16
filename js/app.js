@@ -66,8 +66,8 @@ const setLanguage = (lang) => {
 
 const langSelect = document.querySelector('.header__lang-switch');
 
-langSelect.addEventListener('change', (event) => {
-  const selectedLang = event.target.value;
+langSelect.addEventListener('change', (e) => {
+  const selectedLang = e.target.value;
   setLanguage(selectedLang);
   localStorage.setItem('lang', selectedLang);
 });
@@ -75,3 +75,29 @@ langSelect.addEventListener('change', (event) => {
 const savedLang = localStorage.getItem('lang') || 'en';
 langSelect.value = savedLang;
 setLanguage(savedLang);
+
+
+// Scroll Spy
+const sections = document.querySelectorAll('section[id]');
+
+const activateScrollSpy = () => {
+  const scrollY = window.scrollY;
+
+  sections.forEach(section => {
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - 60;
+    const sectionId = section.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
+      links.forEach(link => {
+        link.parentElement.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.parentElement.classList.add('active');
+        }
+      });
+    }
+  });
+};
+
+// Initial call to set the active link on page load
+window.addEventListener('scroll', activateScrollSpy);
