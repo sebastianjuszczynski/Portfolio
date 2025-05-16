@@ -1,3 +1,5 @@
+import { translations } from "./i18n.js";
+
 const mobileButton = document.querySelector('.header__mobile-button');
 const mobileMenu = document.querySelector('.header__menu');
 const links = document.querySelectorAll('.header__menu-link');
@@ -53,3 +55,23 @@ lightModeToggle.addEventListener('click', () => {
 });
 
 
+// Language switcher
+const setLanguage = (lang) => {
+  const elementsToTranslate = document.querySelectorAll('[data-i18n]');
+  elementsToTranslate.forEach((element) => {
+    const key = element.getAttribute('data-i18n');
+    element.textContent = translations[lang][key];
+  });
+}
+
+const langSelect = document.querySelector('.header__lang-switch');
+
+langSelect.addEventListener('change', (event) => {
+  const selectedLang = event.target.value;
+  setLanguage(selectedLang);
+  localStorage.setItem('lang', selectedLang);
+});
+
+const savedLang = localStorage.getItem('lang') || 'en';
+langSelect.value = savedLang;
+setLanguage(savedLang);
