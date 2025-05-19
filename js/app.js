@@ -1,24 +1,29 @@
 import { translations } from "./i18n.js";
 
-const mobileButton = document.querySelector('.header__mobile-button');
+const mobileButton = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.header__menu');
 const links = document.querySelectorAll('.header__menu-link');
 const logo = document.querySelector('.header__logo-text');
 const lightModeToggle = document.querySelector('.header__toggle-theme');
 const body = document.querySelector('body');
 
-
 const toggleMenu = () => {
-  const isOpen = mobileButton.classList.toggle('open');
-  mobileMenu.classList.toggle('header__menu--open', isOpen);
+  mobileButton.classList.toggle('is-active');
+  const isOpen = mobileMenu.classList.toggle('header__menu--open');
   mobileButton.setAttribute('aria-expanded', isOpen.toString());
 };
 
 const closeMenu = () => {
   mobileMenu.classList.remove('header__menu--open');
-  mobileButton.classList.remove('open');
+  mobileButton.classList.remove('is-active');
   mobileButton.setAttribute('aria-expanded', 'false');
 };
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeMenu();
+  }
+});
 
 mobileButton.addEventListener('click', toggleMenu);
 
@@ -101,3 +106,14 @@ const activateScrollSpy = () => {
 
 // Initial call to set the active link on page load
 window.addEventListener('scroll', activateScrollSpy);
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
