@@ -1,12 +1,27 @@
+// ====================
+// IMPORTS
+// ====================
 import { translations } from "./i18n.js";
 
+// ====================
+// SELECTORS
+// ====================
+const body = document.body;
 const mobileButton = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.header__menu');
 const links = document.querySelectorAll('.header__menu-link');
 const logo = document.querySelector('.header__logo-text');
 const lightModeToggle = document.querySelector('.header__toggle-theme');
-const body = document.querySelector('body');
+const langDropdown = document.querySelector('.header__lang-dropdown');
+const langButton = langDropdown.querySelector('.header__lang-button');
+const langOptions = langDropdown.querySelector('.header__lang-options');
+const langCode = langButton.querySelector('.lang-code');
+const header = document.querySelector('.header');
+const sections = document.querySelectorAll('section[id]');
 
+// ====================
+// MOBILE MENU
+// ====================
 const toggleMenu = () => {
   mobileButton.classList.toggle('is-active');
   const isOpen = mobileMenu.classList.toggle('header__menu--open');
@@ -19,75 +34,99 @@ const closeMenu = () => {
   mobileButton.setAttribute('aria-expanded', 'false');
 };
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeMenu();
-  }
-});
-
-mobileButton.addEventListener('click', toggleMenu);
-
-links.forEach(link => {
-  link.addEventListener('click', () => {
+const setupMobileMenu = () => {
+  mobileButton.addEventListener('click', toggleMenu);
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      links.forEach(l => l.parentElement.classList.remove('active'));
+      link.parentElement.classList.add('active');
+      closeMenu();
+    });
+  });
+  logo.addEventListener('click', () => {
     links.forEach(l => l.parentElement.classList.remove('active'));
-    link.parentElement.classList.add('active');
     closeMenu();
   });
-});
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) closeMenu();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+};
 
-logo.addEventListener('click', () => {
-  links.forEach(l => l.parentElement.classList.remove('active'));
-  closeMenu();
-});
+// ====================
+// THEME TOGGLE
+// ====================
+const setupThemeToggle = () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') body.classList.add('light-theme');
 
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 768) {
-    closeMenu();
-  }
-});
+  lightModeToggle.addEventListener('click', () => {
+    const isLight = body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+};
 
-// Theme toggle
-
-
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-  body.classList.add('light-theme');
-}
-
-lightModeToggle.addEventListener('click', () => {
-  const isLight = body.classList.toggle('light-theme');
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
-});
-
-
-// Language switcher
+// ====================
+// LANGUAGE SWITCHER
+// ====================
 const setLanguage = (lang) => {
-  const elementsToTranslate = document.querySelectorAll('[data-i18n]');
-  elementsToTranslate.forEach((element) => {
-    const key = element.getAttribute('data-i18n');
-    element.textContent = translations[lang][key];
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    el.textContent = translations[lang][key];
   });
-}
+};
 
-const langSelect = document.querySelector('.header__lang-switch');
+const setupLanguageSwitcher = () => {
+  langButton.addEventListener('click', () => {
+    langOptions.classList.toggle('show');
+    const expanded = langButton.getAttribute('aria-expanded') === 'true';
+    langButton.setAttribute('aria-expanded', (!expanded).toString());
+  });
 
-langSelect.addEventListener('change', (e) => {
-  const selectedLang = e.target.value;
-  setLanguage(selectedLang);
-  localStorage.setItem('lang', selectedLang);
-});
+  langOptions.querySelectorAll('.lang-option').forEach(option => {
+    option.addEventListener('click', () => {
+      const lang = option.dataset.lang;
+      setLanguage(lang);
+      localStorage.setItem('lang', lang);
+      langCode.textContent = lang.toUpperCase();
 
-const savedLang = localStorage.getItem('lang') || 'en';
-langSelect.value = savedLang;
-setLanguage(savedLang);
+      const flagImg = option.querySelector('img');
+      const currentFlag = langButton.querySelector('.lang-flag');
+      currentFlag.src = flagImg.src;
+      currentFlag.alt = flagImg.alt;
 
+      langOptions.classList.remove('show');
+      langButton.setAttribute('aria-expanded', 'false');
+    });
+  });
 
-// Scroll Spy
-const sections = document.querySelectorAll('section[id]');
+  const savedLang = localStorage.getItem('lang') || 'en';
+  setLanguage(savedLang);
+  langCode.textContent = savedLang.toUpperCase();
 
+  const initialFlag = langOptions.querySelector(`.lang-option[data-lang="${savedLang}"] img`);
+  if (initialFlag) {
+    const currentFlag = langButton.querySelector('.lang-flag');
+    currentFlag.src = initialFlag.src;
+    currentFlag.alt = initialFlag.alt;
+  }
+
+  document.addEventListener('click', (e) => {
+    if (!langDropdown.contains(e.target)) {
+      langOptions.classList.remove('show');
+      langButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+};
+
+// ====================
+// SCROLL SPY
+// ====================
 const activateScrollSpy = () => {
   const scrollY = window.scrollY;
-
   sections.forEach(section => {
     const sectionHeight = section.offsetHeight;
     const sectionTop = section.offsetTop - 60;
@@ -104,16 +143,28 @@ const activateScrollSpy = () => {
   });
 };
 
-// Initial call to set the active link on page load
-window.addEventListener('scroll', activateScrollSpy);
+const setupScrollSpy = () => {
+  window.addEventListener('scroll', activateScrollSpy);
+};
 
-const header = document.querySelector('.header');
+// ====================
+// SCROLL HEADER
+// ====================
+const setupStickyHeader = () => {
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 50);
+  });
+};
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
+// ====================
+// INIT
+// ====================
+const init = () => {
+  setupMobileMenu();
+  setupThemeToggle();
+  setupLanguageSwitcher();
+  setupScrollSpy();
+  setupStickyHeader();
+};
 
+init();
