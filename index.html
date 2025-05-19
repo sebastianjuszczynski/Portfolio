@@ -13,28 +13,34 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/header.css">
+
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/hamburgers.css">
+        <link rel="stylesheet" href="css/header.css">
+
 </head>
 
 <body>
     <header class="header">
-        <nav class="header__nav" role="navigation">
+        <nav class="header__nav" role="navigation" aria-label="Main navigation">
             <a href="#home" class="header__logo-text">Seba.dev</a>
             <ul class="header__menu" id="main-menu">
-                <li class="header__menu-item"><a href="#about" class="header__menu-link" data-i18n="about">About</a></li>
-                <li class="header__menu-item"><a href="#projects" class="header__menu-link" data-i18n="projects">Projects</a></li>
-                <li class="header__menu-item"><a href="#contact" class="header__menu-link" data-i18n="contact">Contact</a></li>
+                <li class="header__menu-item"><a href="#about" class="header__menu-link" data-i18n="about">About</a>
+                </li>
+                <li class="header__menu-item"><a href="#projects" class="header__menu-link"
+                        data-i18n="projects">Projects</a></li>
+                <li class="header__menu-item"><a href="#contact" class="header__menu-link"
+                        data-i18n="contact">Contact</a></li>
             </ul>
             <div class="header__controls">
                 <button class="header__toggle-theme" aria-label="Toggle dark mode">
-                    <svg  class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor">
+                    <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                     </svg>
-                    <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor">
+                    <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
                     </svg>
@@ -44,10 +50,11 @@
                     <option value="pl">PL</option>
                 </select>
             </div>
-            <button class="header__mobile-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="main-menu">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
+            <button class="hamburger hamburger--elastic" type="button" aria-label="Toggle menu"
+                aria-controls="main-menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
             </button>
         </nav>
     </header>
@@ -117,7 +124,7 @@
     <footer class="footer">
         <p class="footer__text">&copy; 2025 MyPortfolio. All rights reserved.</p>
     </footer>
-    <script  type="module" src="./js/app.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 
 </html>
