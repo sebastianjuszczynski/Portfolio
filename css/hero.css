@@ -1,0 +1,81 @@
+.section__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    color: var(--color-text);
+    height: 100dvh;
+}
+
+.section__hero img {
+    width: 80%;
+    max-width: 300px;
+    height: auto;
+}
+
+.section__hero--header {
+    margin-top: 5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.section__hero--span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.section__hero--text {
+    font-size: 1.5rem;
+    max-width: 32ch;
+}
+
+.section__hero--socials-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-text-secondary);
+}
+/* .social-icon:hover {
+    fill: var(--color-text);
+} */
+
+.social-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.section__hero--button {
+    margin-top: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: bounce 2s infinite;
+    z-index: -999;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
