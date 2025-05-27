@@ -3,8 +3,8 @@
 .header {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    bottom: calc(100dvh - 80px);
+    width: 100%;
     padding: 10px;
     /* margin: 0 5rem; */
     /* z-index: 1; */
@@ -16,10 +16,12 @@
 }
 .header__nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 0 1rem;
     gap: 1rem;
     align-items: center;
+
+  
 }
 .header__logo-text {
     margin-right: auto;
@@ -35,6 +37,7 @@
     display: flex;
     flex-direction: column;
     position: fixed;
+    gap: 2rem;
     top: 0;
     bottom: 0;
     left: 0;
@@ -47,12 +50,13 @@
     transition: var(--transition-base);
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    
 }
 .header__menu--open {
     opacity: 1;
     transform: translateX(0);
     background-color: var(--color-background);
+    z-index: 1;
 }
 .header__menu-item {
     margin: 0;
@@ -78,6 +82,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 1rem;
 }
 .theme-icon {
   transition: opacity 0.4s, transform 0.4s;
@@ -100,13 +105,11 @@
   outline: none;
 }
 
-/* Moon widoczny w dark mode (domyślnie) */
 .theme-icon--moon {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* Sun widoczny, gdy light-theme */
 body.light-theme .theme-icon--sun {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1.2) rotate(10deg);
