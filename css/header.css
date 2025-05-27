@@ -1,6 +1,4 @@
-.main {
-    margin-top: 90px;
-}
+
 
 .header {
     position: fixed;
@@ -8,6 +6,7 @@
     left: 0;
     right: 0;
     padding: 10px;
+    /* margin: 0 5rem; */
     /* z-index: 1; */
     background-color: var(--color-background);
     transition: background-color 0.4s, color 0.4s;
@@ -48,6 +47,7 @@
     transition: var(--transition-base);
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 .header__menu--open {
     opacity: 1;
@@ -180,7 +180,9 @@ body.light-theme .theme-icon--moon {
 .lang-option:hover {
   background-color: var(--color-background-scrolled);
 }
-
+.hamburger {
+  z-index: 2;
+}
 
 
 
