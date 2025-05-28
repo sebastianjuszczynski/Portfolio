@@ -1,13 +1,16 @@
+.main {
+    padding-top: 80px;
+}
+
 .section__hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 4rem;
-    padding: 2rem 1.5rem;
+    padding:  0 1.5rem;
     gap: 2rem;
     color: var(--color-text);
-    height: 100dvh;
+    height: calc(100dvh - 176px);   
 }
 
 .section__hero-image-container {
@@ -54,7 +57,7 @@
     fill: var(--color-text-secondary);
 }
 
-.social-icon svg {
+.social__hero--social-icon svg {
     width: 32px;
     height: 32px;
 }
@@ -62,18 +65,22 @@
 .section__hero--arrow-container {
     display: inline-block;
     animation: bounce 2s infinite;  
+    z-index: -1;
 }
 .section__hero--link {
     display: inline-block;
     text-decoration: none;
     color: var(--color-text); 
+    
 }
 
 .section__hero--arrow-icon {
     width: auto;
     height: 56px;
     fill: var(--color-primary);
+    cursor: pointer;
     vertical-align: middle;
+    
 }
 
 
