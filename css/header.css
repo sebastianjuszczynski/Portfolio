@@ -54,9 +54,10 @@
 .header__menu--open {
   opacity: 1;
   transform: translateX(0);
-  background-color: var(--color-background);
-  z-index: 1;
+  background-color: var(--color-background); 
+  /* z-index: 1; */
 }
+
 
 .header__menu-item {
   margin: 0;
@@ -232,4 +233,7 @@ body.light-theme .theme-icon--moon {
   .header__menu-link:hover::after {
     transform: scaleX(1);
   }
+}
+#skills {
+  scroll-margin-top: 100px; /* lub tyle ile ma wysokość headera */
 }

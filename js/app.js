@@ -22,6 +22,7 @@ const langOptions = langDropdown.querySelector('.header__lang-options');
 const langCode = langButton.querySelector('.lang-code');
 const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section[id]');
+const heroArrow = document.querySelector('.section__hero--arrow-container');
 
 // ====================
 // MOBILE MENU
@@ -30,6 +31,7 @@ const toggleMenu = () => {
   mobileButton.classList.toggle('is-active');
   const isOpen = mobileMenu.classList.toggle('header__menu--open');
   mobileButton.setAttribute('aria-expanded', isOpen.toString());
+  heroArrow.classList.toggle('hidden', isOpen);
 };
 
 const closeMenu = () => {
