@@ -5,8 +5,8 @@
 }
 
 :root {
-    --color-primary: #EE2B1B;
-    --color-primary-hover: #D3291B;
+    --color-primary: #EF2A1A;
+    --color-primary-hover: #D82518;
     --color-secondary: #161616;
     --color-background: #000000;
     --color-background-scrolled: rgba(0, 0, 0, 0.8);
@@ -17,8 +17,10 @@
     --font-family: 'Inter', sans-serif;
     --font-family-logo: 'Orbitron', sans-serif;
     --font-size-base: 16px;
-    --font-size-lg: 1.25rem;
     --font-size-sm: 0.875rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2.5rem;
 
     --breakpoint-mobile: 480px;
     --breakpoint-tablet: 768px;
