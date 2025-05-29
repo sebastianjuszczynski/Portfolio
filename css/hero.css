@@ -19,21 +19,29 @@
     border-radius: 20px;
 }
 
-.section__hero img {
-    background-color: aqua;
-    width: 95%;
+.section__hero-image {
+    width: 85%;
     max-width: 350px;
     height: auto;
     border-radius: 20px;
 }
 
+.section__hero--text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .section__hero--text-title {
     margin-top: 2rem;
+    margin-bottom: 0.5rem;
     font-size: var(--font-size-xxl);
     font-weight: 600;
+    line-height: 1.2;
 }
 
 .section__hero--text-span {
+    display: block;
     color: var(--color-primary);
     font-weight: bold;
 }
@@ -55,11 +63,6 @@
     width: 30px;
     height: 30px;
     fill: var(--color-text-secondary);
-}
-
-.social__hero--social-icon svg {
-    width: 32px;
-    height: 32px;
 }
 
 .section__hero--arrow-container {
