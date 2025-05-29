@@ -38,6 +38,7 @@ const closeMenu = () => {
   mobileMenu.classList.remove('header__menu--open');
   mobileButton.classList.remove('is-active');
   mobileButton.setAttribute('aria-expanded', 'false');
+  heroArrow.classList.remove('hidden');
 };
 
 const setupMobileMenu = () => {
