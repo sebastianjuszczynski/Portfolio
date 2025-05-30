@@ -95,9 +95,6 @@
     }
 
     .section__about--description {
-        color: var(--color-text-secondary);
-        line-height: 1.4;
-        max-width: 60ch;
         margin: 1.5rem auto;
         font-size: var(--font-size-sm);
     }
