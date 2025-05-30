@@ -2,7 +2,7 @@
     gap: 5px;
     background-color: var(--color-secondary);
     width: 85%;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
@@ -68,6 +68,7 @@
     .section__about {
         text-align: left;
         padding: 3rem;
+        margin-top: 3rem;
     }
 
     .section__about--container {
@@ -102,11 +103,11 @@
     }
 
     .section__about--link {
-        text-align: center;
+        text-align: left;
         font-size: var(--font-size-sm);
         font-weight: normal;
         letter-spacing: 1px;
-        width: 50%;
+        width: 40%;
         transition: background-color .4s ease-in-out;
         margin: 0;
     }
