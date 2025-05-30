@@ -13,7 +13,11 @@ export const translations = {
     skillsSubtitle: "My",
     skillsSubtitleSpan: "tech stack",
     skillsTitle: "Skills",
-    skillsInfo: "Visit the projects section to see the work done with there web technologies."
+    skillsInfo: "Visit the projects section to see the work done with there web technologies.",
+    projectsSubtitle: "My",
+    projectsSubtitleSpan: "work",
+    projectsTitle: "Projects",
+
 
 
     
@@ -32,7 +36,9 @@ export const translations = {
     skillsSubtitle: "Mój",
     skillsSubtitleSpan: "tech stack",
     skillsTitle: "Umiejętności",
-    skillsInfo: "Sprawdź sekcję z projektami, aby zobaczyć efekty pracy z tymi technologiami."
-
+    skillsInfo: "Sprawdź sekcję z projektami, aby zobaczyć efekty pracy z tymi technologiami.",
+    projectsSubtitle: "Moje",
+    projectsSubtitleSpan: "prace",
+    projectsTitle: "Projekty",
   }
 };
