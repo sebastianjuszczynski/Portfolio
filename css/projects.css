@@ -119,6 +119,10 @@
     }
 
     .section__projects-image {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        width: 100%;
+        max-width: 300px;
         transition: transform 0.6s ease;
     }
 
