@@ -17,7 +17,8 @@ export const translations = {
     projectsSubtitle: "My",
     projectsSubtitleSpan: "work",
     projectsTitle: "Projects",
-
+    projectsDescription: "An application for browsing movies using an API.",
+    projectsLink: "Visit project",
 
 
     
@@ -40,5 +41,7 @@ export const translations = {
     projectsSubtitle: "Moje",
     projectsSubtitleSpan: "prace",
     projectsTitle: "Projekty",
+    projectsDescription: "Aplikacja do przeglądania filmów z użyciem API.",
+    projectsLink: "Zobacz projekt"
   }
 };

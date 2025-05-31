@@ -97,20 +97,20 @@
 @media (min-width: 768px) {
     .main {
         padding-top: 50px;
-        max-width: 1200px;
+        max-width: 1444px;
     }
 
     .section__hero {
         height: 100dvh;
-        width: 85%;
+        /* width: 85%; */
+        justify-content: space-around;
     }
 
     .section__hero-container {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         padding-top: 3rem;
-        gap: 8rem;
         margin-bottom: 2rem;
     }
 
@@ -137,6 +137,10 @@
     .section__hero--social-icon:hover {
         fill: var(--color-primary-hover);
         transform: translateY(-2px);
+    }
+
+    .section__hero--arrow-container {
+        margin-bottom: 2rem;
     }
 
 }
