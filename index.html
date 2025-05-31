@@ -21,13 +21,14 @@
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 
 <body>
     <header class="header">
         <nav class="header__nav" role="navigation" aria-label="Main navigation">
-            <a href="#home" class="header__logo-text">Seba.dev</a>
+            <a href="#hero" class="header__logo-text">Seba.dev</a>
             <ul class="header__menu" id="main-menu">
                 <li class="header__menu-item"><a href="#about" class="header__menu-link" data-i18n="about">About</a>
                 </li>
@@ -148,7 +149,7 @@
                     <a href="#contact" class="section__about--link" data-i18n="aboutButton">Contact Me</a>
                 </div>
                 <div class="section__about--image-container">
-                    <img src="/assets/images/code-thinking.svg" alt="Illustration of developer"
+                    <img src="assets/images/code-thinking.svg" alt="Illustration of developer"
                         class="section__about--image">
                 </div>
             </div>
@@ -243,7 +244,7 @@
                 </div>
                 <div class="section__projects-card--container">
                     <div class="section__projects-card">
-                        <img class="section__projects-image" src="/assets/images/movies-browser.png"
+                        <img class="section__projects-image" src="assets/images/movies-browser.png"
                             alt="Movies Browser screenshot" loading="lazy" />
                         <div class="section__projects-content">
                             <h3 class="section__projects-title">Movies Browser</h3>
@@ -274,7 +275,7 @@
                     </div>
 
                     <div class="section__projects-card">
-                        <img class="section__projects-image" src="/assets/images/movies-browser.png"
+                        <img class="section__projects-image" src="assets/images/movies-browser.png"
                             alt="Movies Browser screenshot" loading="lazy" />
                         <div class="section__projects-content">
                             <h3 class="section__projects-title">Movies Browser</h3>
@@ -304,7 +305,7 @@
                         </div>
                     </div>
                     <div class="section__projects-card">
-                        <img class="section__projects-image" src="/assets/images/movies-browser.png"
+                        <img class="section__projects-image" src="assets/images/movies-browser.png"
                             alt="Movies Browser screenshot" loading="lazy" />
                         <div class="section__projects-content">
                             <h3 class="section__projects-title">Movies Browser</h3>
@@ -334,7 +335,7 @@
                         </div>
                     </div>
                     <div class="section__projects-card">
-                        <img class="section__projects-image" src="/assets/images/movies-browser.png"
+                        <img class="section__projects-image" src="assets/images/movies-browser.png"
                             alt="Movies Browser screenshot" loading="lazy" />
                         <div class="section__projects-content">
                             <h3 class="section__projects-title">Movies Browser</h3>
@@ -364,7 +365,7 @@
                         </div>
                     </div>
                     <div class="section__projects-card">
-                        <img class="section__projects-image" src="/assets/images/movies-browser.png"
+                        <img class="section__projects-image" src="assets/images/movies-browser.png"
                             alt="Movies Browser screenshot" loading="lazy" />
                         <div class="section__projects-content">
                             <h3 class="section__projects-title">Movies Browser</h3>
@@ -397,23 +398,29 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
-            <h2 class="contact__title">Contact</h2>
-            <form class="contact__form">
-                <div class="contact__form-group">
-                    <label for="name" class="contact__label">Name</label>
-                    <input type="text" id="name" class="contact__input" required>
+        <section class="section__contact" id="contact">
+            <div class="section__contact-container">
+                <div class="section__contact-text--container">
+                    <h3 class="section__contact-step">
+                        <span data-i18n="contactSubtitle">Text</span>
+                        <span class="section__contact-step--span" data-i18n="contactSubtitleSpan"> me</span>
+                    </h3>
+                    <h2 class="section__contact-heading" data-i18n="contactTitle">Contact</h2>
                 </div>
-                <div class="contact__form-group">
-                    <label for="email" class="contact__label">Email</label>
-                    <input type="email" id="email" class="contact__input" required>
-                </div>
-                <div class="contact__form-group">
-                    <label for="message" class="contact__label">Message</label>
-                    <textarea id="message" class="contact__input" required></textarea>
-                </div>
-                <button type="submit" class="contact__button">Send</button>
-            </form>
+                <form id="contact-form" class="section__contact-form">
+                    <div class="contact__form-inputs">
+                        <div class="contact__form-input--wrapper">
+                            <input type="text" name="name" required data-i18n-placeholder="contactName">
+                        </div>
+                        <div class="contact__form-input--wrapper">
+                            <input type="email" name="email" required data-i18n-placeholder="contactEmail">
+                        </div>
+                    </div>
+                    <div class="contact__form-textarea--wrapper">
+                        <textarea name="message" required data-i18n-placeholder="contactMessage"></textarea>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 

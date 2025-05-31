@@ -89,10 +89,16 @@ const setupMobileMenu = () => {
   // ====================
   const setLanguage = (lang) => {
     const elements = document.querySelectorAll('[data-i18n]');
+    const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+    
     elements.forEach(el => {
       const key = el.getAttribute('data-i18n');
       el.textContent = translations[lang][key];
     });
+    placeholders.forEach(p => {
+      const key = p.getAttribute("data-i18n-placeholder");
+      p.placeholder = translations[lang][key] || "";
+    })
   };
 
   const setupLanguageSwitcher = () => {

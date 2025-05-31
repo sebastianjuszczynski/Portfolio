@@ -19,6 +19,13 @@ export const translations = {
     projectsTitle: "Projects",
     projectsDescription: "An application for browsing movies using an API.",
     projectsLink: "Visit project",
+    contactSubtitle: "Text",
+    contactSubtitleSpan: "me",
+    contactTitle: "Contact",
+    contactName: "Your name",
+    contactEmail: "Your emial",
+    contactMessage: "Enter your message",
+
 
 
     
@@ -42,6 +49,13 @@ export const translations = {
     projectsSubtitleSpan: "prace",
     projectsTitle: "Projekty",
     projectsDescription: "Aplikacja do przeglądania filmów z użyciem API.",
-    projectsLink: "Zobacz projekt"
+    projectsLink: "Zobacz projekt",
+    contactSubtitle: "Napisz",
+    contactSubtitleSpan: "do mnie",
+    contactTitle: "Kontakt",
+    contactName: "Twoje imię",
+    contactEmail: "Twój email",
+    contactMessage: "Napisz wiadomość"
+
   }
 };
