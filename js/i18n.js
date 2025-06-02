@@ -25,10 +25,16 @@ export const translations = {
     contactName: "Your name",
     contactEmail: "Your emial",
     contactMessage: "Enter your message",
+    contactFormButton: "Send",
+    errorName: "Name must be at least 3 characters.",
+    errorEmail: "Please enter a valid email address.",
+    errorMessage: "Message must be at least 10 characters.",
+    successMessage: "✅ Message sent successfully!",
+    errorSubmit: "❌ Something went wrong. Please try again.",
+    errorNetwork: "⚠️ Failed to connect to the server.",
 
 
 
-    
   },
   pl: {
     about: "O mnie",
@@ -55,7 +61,14 @@ export const translations = {
     contactTitle: "Kontakt",
     contactName: "Twoje imię",
     contactEmail: "Twój email",
-    contactMessage: "Napisz wiadomość"
+    contactMessage: "Napisz wiadomość",
+    contactFormButton: "Wyślij",
+    errorName: "Imię musi mieć min. 3 znaki.",
+    errorEmail: "Podaj poprawny adres e-mail.",
+    errorMessage: "Wiadomość musi mieć min. 10 znaków.",
+    successMessage: "✅ Wiadomość została wysłana!",
+    errorSubmit: "❌ Wystąpił błąd. Spróbuj ponownie.",
+    errorNetwork: "⚠️ Nie udało się połączyć z serwerem.",
 
   }
 };
