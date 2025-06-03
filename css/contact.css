@@ -98,8 +98,8 @@ textarea:focus {
     color: var(--color-text-primary);
     padding: .5rem;
     border-radius: 20px;
+    border: none;
     text-transform: uppercase;
-    /* margin: .5rem auto; */
     transition: background-color .4s ease-in-out;
 }
 
