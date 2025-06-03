@@ -13,6 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/hamburgers.css">
@@ -22,13 +24,14 @@
     <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
 
 </head>
 
 <body>
     <header class="header">
         <nav class="header__nav" role="navigation" aria-label="Main navigation">
-            <a href="#hero" class="header__logo-text">Seba.dev</a>
+            <a href="#hero" class="header__logo-text">Seb.dev</a>
             <ul class="header__menu" id="main-menu">
                 <li class="header__menu-item"><a href="#about" class="header__menu-link" data-i18n="about">About</a>
                 </li>
@@ -433,7 +436,22 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text">&copy; 2025 MyPortfolio. All rights reserved.</p>
+        <div class="footer__container">
+            <div class="footer__nav-container">
+                <h3 class="footer__header">Seb.dev</h3>
+                <ul class="footer__nav">
+                    <li class="footer__nav-item"><a href="#about" class="footer__nav-link">About</a></li>
+                    <li class="footer__nav-item"><a href="#projects" class="footer__nav-link">Projects</a></li>
+                    <li class="footer__nav-item"><a href="#contact" class="footer__nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__socials">
+                <a href="" class="footer__socials-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="" class="footer__socials-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="" class="footer__socials-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <p class="footer__copy">&copy;All rights reserved by <span class="footer__copy-span">Seb.dev</span></p>
     </footer>
     <script type="module" src="./js/app.js"></script>
     <script type="module" src="./js/global.js"></script>

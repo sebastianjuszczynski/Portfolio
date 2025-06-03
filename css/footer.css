@@ -1,0 +1,115 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: var(--color-background);
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+.footer__nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__header {
+    font-family: var(--font-family-logo);
+    font-size: var(--font-size-xl);
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-base);
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.footer__nav-link {
+    text-decoration: none;
+    color: var(--color-text-footer);
+    font-weight: 300;
+    transition: color 0.4s ease-in-out;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.footer__socials-link {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    padding: 0;
+    font-size: var(--font-size-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.footer__copy {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.footer__copy-span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+@media (min-width: 768px) {
+    .footer__container {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 90%;
+        margin-bottom: 5rem;
+    }
+
+    .footer__nav-container {
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .footer__header {
+        font-size: var(--font-size-lg);
+        letter-spacing: 6px;
+    }
+
+    .footer__socials {
+        margin: 0;
+    }
+
+    .footer__nav-link:hover {
+        color: var(--color-text-hover)
+    }
+
+    .footer__socials-link:hover {
+        background-color: var(--color-text);
+        color: var(--color-background);
+    }
+}
