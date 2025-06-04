@@ -50,3 +50,11 @@ html {
     scroll-behavior: smooth;
 }
 
+.scroll__reveal-card {
+  opacity: 0;
+}
+
+.scroll__reveal-card.visible {
+  opacity: 1;
+}
+

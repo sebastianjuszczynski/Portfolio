@@ -12,6 +12,7 @@ import { initContactForm } from './contact.js';
 
 
 
+
 // ====================
 // SELECTORS
 // ====================
@@ -188,6 +189,86 @@ const setupStickyHeader = () => {
 };
 
 // ====================
+// SCROLL REVEAL
+// ====================
+const scrollReveal = () => {
+  const isMobile = window.innerWidth <= 768;
+  console.log(isMobile);
+
+  const scrollCardBigScreens = () => {
+    const cards = document.querySelectorAll('.scroll__reveal-card');
+    cards.forEach(card => {
+      card.classList.add('visible')
+    })
+      ScrollReveal().reveal('.scroll__reveal-card', {
+    distance: '30px',
+    duration: 500,
+    interval: 80,
+    origin: 'bottom',
+    easing: 'ease-out',
+    reset: false,
+    viewOffset: { top: 100, bottom: 100 }
+  });
+};
+  
+
+  const scrollCardMobile = () => {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          entry.target.classList.add('visible');
+
+          ScrollReveal().reveal(el, {
+            distance: '30px',
+            duration: 600,
+            delay: 100,
+            easing: 'ease-out',
+            origin: 'bottom',
+            reset: false
+          });
+
+          obs.unobserve(el); // tylko raz
+        }
+      });
+    }, {
+      threshold: 0.3, // 30% widoczne
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    document.querySelectorAll('.scroll__reveal-card').forEach(el => observer.observe(el));
+
+  }
+
+  ScrollReveal().reveal('.scroll__reveal', {
+    distance: '40px',
+    duration: 700,
+    delay: 100,
+    interval: 100,
+    easing: 'ease-out',
+    origin: 'bottom',
+    reset: false,
+    viewOffset: { top: 100, bottom: 100 }
+  });
+  if (isMobile) {
+    scrollCardMobile()
+  }
+  else {
+    scrollCardBigScreens()
+  };
+  ScrollReveal().reveal('.scroll__reveal-item', {
+    distance: '30px',
+    duration: 500,
+    interval: 80,
+    origin: 'bottom',
+    easing: 'ease-out',
+    reset: false,
+    viewOffset: { top: 100, bottom: 100 }
+  });
+}
+
+
+// ====================
 // INIT
 // ====================
 const init = () => {
@@ -197,14 +278,7 @@ const init = () => {
   setupScrollSpy();
   setupStickyHeader();
   initContactForm();
+  scrollReveal();
 };
 
 init();
-// ====================
-// FORM
-// ====================
-
-
-
-
-
