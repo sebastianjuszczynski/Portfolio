@@ -2,16 +2,11 @@
 // IMPORTS
 // ====================
 import { translations } from "./i18n.js";
-import { setLanguageLocalStorage } from "./global.js";
-import {
-  validateField
-} from './formValidation.js';
-import { initContactForm } from './contact.js';
-
-
-
-
-
+import { setLanguageLocalStorage } from "./utils.js";
+import { validateField } from './form/formValidation.js';
+import { initContactForm } from './form/contact.js';
+import { scrollReveal } from "./scrollReveal.js";
+import { debounce } from "./utils.js";
 
 // ====================
 // SELECTORS
@@ -30,7 +25,21 @@ const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section[id]');
 const heroArrow = document.querySelector('.section__hero--arrow-container');
 
-
+// ====================
+// HELPERS
+// ====================
+const clearActiveLinks = () => {
+  links.forEach(link => link.parentElement)
+};
+const updateLangButtonUI = (lang) => {
+  langCode.textContent = lang.toUpperCase();
+  const initialFlag = langOptions.querySelector(`.lang-option[data-lang="${lang}"] img`);
+  if (initialFlag) {
+    const currentFlag = langButton.querySelector('.lang-flag');
+    currentFlag.src = initialFlag.src;
+    currentFlag.alt = initialFlag.alt;
+  };
+};
 // ====================
 // MOBILE MENU
 // ====================
@@ -52,13 +61,12 @@ const setupMobileMenu = () => {
   mobileButton.addEventListener('click', toggleMenu);
   links.forEach(link => {
     link.addEventListener('click', () => {
-      links.forEach(l => l.parentElement.classList.remove('active'));
-      link.parentElement.classList.add('active');
+      clearActiveLinks();
       closeMenu();
     });
   });
   logo.addEventListener('click', () => {
-    links.forEach(l => l.parentElement.classList.remove('active'));
+    clearActiveLinks();
     closeMenu();
   });
   window.addEventListener('resize', () => {
@@ -69,14 +77,14 @@ const setupMobileMenu = () => {
   });
   document.addEventListener('click', (e) => {
     const clickedLink = e.target.closest('.header__menu a');
-    const clickedHamburger = e.target.closest('.hamburger')
-    const menuVisible = mobileMenu.classList.contains('header__menu--open')
+    const clickedHamburger = e.target.closest('.hamburger');
+    const menuVisible = mobileMenu.classList.contains('header__menu--open');
 
     if (!clickedLink && !clickedHamburger && menuVisible) {
-      closeMenu()
-    }
-  })
-}
+      closeMenu();
+    };
+  });
+};
 
 // ====================
 // THEME TOGGLE
@@ -109,6 +117,7 @@ const setLanguage = (lang) => {
   document.querySelectorAll('.input-error').forEach(input => {
     validateField(input);
   });
+  updateLangButtonUI(lang);
 };
 
 const setupLanguageSwitcher = () => {
@@ -123,13 +132,6 @@ const setupLanguageSwitcher = () => {
       const lang = option.dataset.lang;
       setLanguageLocalStorage(lang);
       setLanguage(lang);
-      langCode.textContent = lang.toUpperCase();
-
-      const flagImg = option.querySelector('img');
-      const currentFlag = langButton.querySelector('.lang-flag');
-      currentFlag.src = flagImg.src;
-      currentFlag.alt = flagImg.alt;
-
       langOptions.classList.remove('show');
       langButton.setAttribute('aria-expanded', 'false');
     });
@@ -137,20 +139,12 @@ const setupLanguageSwitcher = () => {
 
   const savedLang = localStorage.getItem('lang') || 'en';
   setLanguage(savedLang);
-  langCode.textContent = savedLang.toUpperCase();
-
-  const initialFlag = langOptions.querySelector(`.lang-option[data-lang="${savedLang}"] img`);
-  if (initialFlag) {
-    const currentFlag = langButton.querySelector('.lang-flag');
-    currentFlag.src = initialFlag.src;
-    currentFlag.alt = initialFlag.alt;
-  }
-
+  updateLangButtonUI(savedLang);
   document.addEventListener('click', (e) => {
     if (!langDropdown.contains(e.target)) {
       langOptions.classList.remove('show');
       langButton.setAttribute('aria-expanded', 'false');
-    }
+    };
   });
 };
 
@@ -169,14 +163,14 @@ const activateScrollSpy = () => {
         link.parentElement.classList.remove('active');
         if (link.getAttribute('href') === `#${sectionId}`) {
           link.parentElement.classList.add('active');
-        }
+        };
       });
-    }
+    };
   });
 };
 
 const setupScrollSpy = () => {
-  window.addEventListener('scroll', activateScrollSpy);
+  window.addEventListener('scroll', debounce(activateScrollSpy, 100));
 };
 
 // ====================
@@ -187,86 +181,6 @@ const setupStickyHeader = () => {
     header.classList.toggle('scrolled', window.scrollY > 50);
   });
 };
-
-// ====================
-// SCROLL REVEAL
-// ====================
-const scrollReveal = () => {
-  const isMobile = window.innerWidth <= 768;
-  console.log(isMobile);
-
-  const scrollCardBigScreens = () => {
-    const cards = document.querySelectorAll('.scroll__reveal-card');
-    cards.forEach(card => {
-      card.classList.add('visible')
-    })
-      ScrollReveal().reveal('.scroll__reveal-card', {
-    distance: '30px',
-    duration: 500,
-    interval: 80,
-    origin: 'bottom',
-    easing: 'ease-out',
-    reset: false,
-    viewOffset: { top: 100, bottom: 100 }
-  });
-};
-  
-
-  const scrollCardMobile = () => {
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          entry.target.classList.add('visible');
-
-          ScrollReveal().reveal(el, {
-            distance: '30px',
-            duration: 600,
-            delay: 100,
-            easing: 'ease-out',
-            origin: 'bottom',
-            reset: false
-          });
-
-          obs.unobserve(el); // tylko raz
-        }
-      });
-    }, {
-      threshold: 0.3, // 30% widoczne
-      rootMargin: '0px 0px -10% 0px'
-    });
-
-    document.querySelectorAll('.scroll__reveal-card').forEach(el => observer.observe(el));
-
-  }
-
-  ScrollReveal().reveal('.scroll__reveal', {
-    distance: '40px',
-    duration: 700,
-    delay: 100,
-    interval: 100,
-    easing: 'ease-out',
-    origin: 'bottom',
-    reset: false,
-    viewOffset: { top: 100, bottom: 100 }
-  });
-  if (isMobile) {
-    scrollCardMobile()
-  }
-  else {
-    scrollCardBigScreens()
-  };
-  ScrollReveal().reveal('.scroll__reveal-item', {
-    distance: '30px',
-    duration: 500,
-    interval: 80,
-    origin: 'bottom',
-    easing: 'ease-out',
-    reset: false,
-    viewOffset: { top: 100, bottom: 100 }
-  });
-}
-
 
 // ====================
 // INIT

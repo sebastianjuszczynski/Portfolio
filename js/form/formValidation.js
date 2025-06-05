@@ -1,5 +1,5 @@
-import { translations } from './i18n.js';
-import { getCurrentLang } from './global.js';
+import { translations } from '../i18n.js';
+import { getCurrentLang } from '../utils.js';
 
 let formTriedSubmit = false;
 
