@@ -1,8 +1,21 @@
 // ====================
 // SCROLL REVEAL
 // ====================
+import { debounce } from "./utils.js";
+
 export const scrollReveal = () => {
   const isMobile = window.innerWidth <= 768;
+  window.addEventListener("resize", debounce(() => {
+  ScrollReveal().clean('.scroll__reveal-card');
+  scrollReveal(); 
+}, 300));
+
+  const defaultRevealOptions = {
+    distance: '30px',
+    origin: 'bottom',
+    easing: 'ease-out',
+    reset: false,
+  }
 
   const revealScrollElement = (selector, options) => {
     ScrollReveal().reveal(selector, options);
@@ -13,12 +26,9 @@ export const scrollReveal = () => {
       .forEach(card => card.classList.add('visible'));
 
     revealScrollElement('.scroll__reveal-card', {
-      distance: '30px',
+      ...defaultRevealOptions,
       duration: 500,
       interval: 80,
-      origin: 'bottom',
-      easing: 'ease-out',
-      reset: false,
       viewOffset: { top: 100, bottom: 100 }
     });
   };
@@ -31,12 +41,9 @@ export const scrollReveal = () => {
           el.classList.add('visible');
 
           revealScrollElement(el, {
-            distance: '30px',
+            ...defaultRevealOptions,
             duration: 600,
-            delay: 100,
-            easing: 'ease-out',
-            origin: 'bottom',
-            reset: false
+            delay: 100
           });
 
           obs.unobserve(el);
@@ -52,13 +59,10 @@ export const scrollReveal = () => {
   };
 
   revealScrollElement('.scroll__reveal', {
-    distance: '40px',
+    ...defaultRevealOptions,
     duration: 700,
     delay: 100,
     interval: 100,
-    easing: 'ease-out',
-    origin: 'bottom',
-    reset: false,
     viewOffset: { top: 100, bottom: 100 }
   });
 

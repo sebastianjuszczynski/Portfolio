@@ -16,6 +16,7 @@ export const validateField = (field) => {
     const value = field.value.trim();
     let isValid = true;
     let message = "";
+    const errorEl = field.parentElement.querySelector(".error-message");
 
     if (field.name === "name") {
         
@@ -38,8 +39,6 @@ export const validateField = (field) => {
             message = translations[getCurrentLang()].errorMessage;
         }
     }
-    const errorEl = field.parentElement.querySelector(".error-message");
-
 
     if (!isValid) {
         field.classList.remove("input-valid");

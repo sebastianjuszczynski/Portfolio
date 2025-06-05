@@ -105,6 +105,7 @@ const setupThemeToggle = () => {
 const setLanguage = (lang) => {
   const elements = document.querySelectorAll('[data-i18n]');
   const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+  document.documentElement.setAttribute("lang", lang);
 
   elements.forEach(el => {
     const key = el.getAttribute('data-i18n');

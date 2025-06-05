@@ -46,7 +46,7 @@ export const translations = {
 
   },
   pl: {
-    home: "Strona główna",
+    home: "Start",
     about: "O mnie",
     skills: "Umiejętności",
     projects: "Projekty",
@@ -80,7 +80,7 @@ export const translations = {
     successMessage: "✅ Wiadomość została wysłana!",
     errorSubmit: "❌ Wystąpił błąd. Spróbuj ponownie.",
     errorNetwork: "⚠️ Nie udało się połączyć z serwerem.",
-    footerHome: "Strona główna",
+    footerHome: "Start",
     footerAbout: "O mnie",
     footerSkills: "Umiejętności",
     footerProjects: "Projekty",
