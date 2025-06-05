@@ -33,7 +33,11 @@
         <nav class="header__nav" role="navigation" aria-label="Main navigation">
             <a href="#hero" class="header__logo-text">Seb.dev</a>
             <ul class="header__menu" id="main-menu">
+                <li class="header__menu-item"><a href="#" class="header__menu-link" data-i18n="home">Home</a>
+                </li>
                 <li class="header__menu-item"><a href="#about" class="header__menu-link" data-i18n="about">About</a>
+                </li>
+                <li class="header__menu-item"><a href="#skills" class="header__menu-link" data-i18n="skills">Skills</a>
                 </li>
                 <li class="header__menu-item"><a href="#projects" class="header__menu-link"
                         data-i18n="projects">Projects</a></li>
@@ -440,9 +444,12 @@
             <div class="footer__nav-container">
                 <h3 class="footer__header">Seb.dev</h3>
                 <ul class="footer__nav">
-                    <li class="footer__nav-item"><a href="#about" class="footer__nav-link">About</a></li>
-                    <li class="footer__nav-item"><a href="#projects" class="footer__nav-link">Projects</a></li>
-                    <li class="footer__nav-item"><a href="#contact" class="footer__nav-link">Contact</a></li>
+                    <li class="footer__nav-item"><a href="#" class="footer__nav-link" data-i18n="footerHome">Home</a></li>
+                    <li class="footer__nav-item"><a href="#about" class="footer__nav-link" data-i18n="footerAbout">About</a></li>
+                    <li class="footer__nav-item"><a href="#skills" class="footer__nav-link" data-i18n="footerSkills">Skills</a></li>
+                    <li class="footer__nav-item"><a href="#projects" class="footer__nav-link" data-i18n="footerProjects">Projects</a></li>
+                    <li class="footer__nav-item"><a href="#Contact" class="footer__nav-link" data-i18n="footerContact">Contact</a></li>
+                  
                 </ul>
             </div>
             <div class="footer__socials">
@@ -451,7 +458,7 @@
                 <a href="" class="footer__socials-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
-        <p class="footer__copy">&copy;All rights reserved by <span class="footer__copy-span">Seb.dev</span></p>
+        <p class="footer__copy"><span data-i18n="footerParagraph">&copy;All rights reserved by </span><span class="footer__copy-span" data-i18n="footerSpan">Seb.dev</span></p>
     </footer>
     <script type="module" src="./js/app.js"></script>
     

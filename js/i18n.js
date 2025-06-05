@@ -1,6 +1,8 @@
 export const translations = {
   en: {
+    home: "Home",
     about: "About",
+    skills: "Skills",
     projects: "Projects",
     contact: "Contact",
     heroTitle: "Hi, I'm",
@@ -32,12 +34,21 @@ export const translations = {
     successMessage: "✅ Message sent successfully!",
     errorSubmit: "❌ Something went wrong. Please try again.",
     errorNetwork: "⚠️ Failed to connect to the server.",
+    footerHome: "Home",
+    footerAbout: "About",
+    footerSkills: "Skills",
+    footerProjects: "Projects",
+    footerContact: "Contact",
+    footerParagraph: "© All rights reserved by ",
+    footerSpan: "Seb.dev",
 
 
 
   },
   pl: {
+    home: "Strona główna",
     about: "O mnie",
+    skills: "Umiejętności",
     projects: "Projekty",
     contact: "Kontakt",
     heroTitle: "Cześć, jestem",
@@ -69,6 +80,13 @@ export const translations = {
     successMessage: "✅ Wiadomość została wysłana!",
     errorSubmit: "❌ Wystąpił błąd. Spróbuj ponownie.",
     errorNetwork: "⚠️ Nie udało się połączyć z serwerem.",
+    footerHome: "Strona główna",
+    footerAbout: "O mnie",
+    footerSkills: "Umiejętności",
+    footerProjects: "Projekty",
+    footerContact: "Kontakt",
+    footerParagraph: "© Wszelkie prawa zastrzeżone. ",
+    footerSpan: "Seb.dev",
 
   }
 };
