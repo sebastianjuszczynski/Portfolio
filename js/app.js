@@ -29,7 +29,7 @@ const heroArrow = document.querySelector('.section__hero--arrow-container');
 // HELPERS
 // ====================
 const clearActiveLinks = () => {
-  links.forEach(link => link.parentElement)
+  links.forEach(link => link.parentElement.classList.remove('active'));
 };
 const updateLangButtonUI = (lang) => {
   langCode.textContent = lang.toUpperCase();
@@ -141,12 +141,20 @@ const setupLanguageSwitcher = () => {
   const savedLang = localStorage.getItem('lang') || 'en';
   setLanguage(savedLang);
   updateLangButtonUI(savedLang);
+
   document.addEventListener('click', (e) => {
     if (!langDropdown.contains(e.target)) {
       langOptions.classList.remove('show');
       langButton.setAttribute('aria-expanded', 'false');
     };
   });
+
+  document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    langOptions.classList.remove("show");
+  }
+});
+
 };
 
 // ====================
