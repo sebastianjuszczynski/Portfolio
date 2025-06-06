@@ -201,7 +201,7 @@ const init = () => {
   setupScrollSpy();
   setupStickyHeader();
   initContactForm();
-  // scrollReveal();
+  scrollReveal();
 };
 
 init();
