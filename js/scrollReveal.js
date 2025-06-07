@@ -1,13 +1,11 @@
-// ====================
-// SCROLL REVEAL
-// ====================
 import { debounce } from "./utils.js";
 
 export const scrollReveal = () => {
   const isMobile = window.innerWidth <= 768;
+  console.log(isMobile)
   window.addEventListener("resize", debounce(() => {
   ScrollReveal().clean('.scroll__reveal-card');
-  scrollReveal(); 
+  // scrollReveal(); 
 }, 300));
 
   const defaultRevealOptions = {
