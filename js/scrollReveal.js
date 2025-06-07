@@ -60,7 +60,7 @@ export const scrollReveal = () => {
     ...defaultRevealOptions,
     duration: 700,
     delay: 100,
-    interval: 100,
+    interval: 500,
     viewOffset: { top: 100, bottom: 100 }
   });
 
