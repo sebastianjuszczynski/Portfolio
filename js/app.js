@@ -5,8 +5,10 @@ import { translations } from "./i18n.js";
 import { setLanguageLocalStorage } from "./utils.js";
 import { validateField } from './form/formValidation.js';
 import { initContactForm } from './form/contact.js';
-import { scrollReveal } from "./scrollReveal.js";
+import { scrollReveal, applyScrollRevealToNewCards } from "./scrollReveal.js";
 import { debounce } from "./utils.js";
+import { renderProjects } from "./renderProjects.js";
+import { getCurrentLang } from "./utils.js";
 
 // ====================
 // SELECTORS
@@ -128,10 +130,13 @@ const setupLanguageSwitcher = () => {
     langButton.setAttribute('aria-expanded', (!expanded).toString());
   });
 
+
   langOptions.querySelectorAll('.lang-option').forEach(option => {
     option.addEventListener('click', () => {
       const lang = option.dataset.lang;
       setLanguageLocalStorage(lang);
+      renderProjects();
+      applyScrollRevealToNewCards();
       setLanguage(lang);
       langOptions.classList.remove('show');
       langButton.setAttribute('aria-expanded', 'false');
@@ -201,7 +206,10 @@ const init = () => {
   setupScrollSpy();
   setupStickyHeader();
   initContactForm();
+  renderProjects();
+  setLanguage(getCurrentLang());
   scrollReveal();
+  
 };
 
 init();

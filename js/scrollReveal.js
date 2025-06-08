@@ -1,12 +1,9 @@
-import { debounce } from "./utils.js";
+  let scrollRevealInitialized = false;
 
 export const scrollReveal = () => {
+
+
   const isMobile = window.innerWidth <= 768;
-  console.log(isMobile)
-  window.addEventListener("resize", debounce(() => {
-  ScrollReveal().clean('.scroll__reveal-card');
-  // scrollReveal(); 
-}, 300));
 
   const defaultRevealOptions = {
     distance: '30px',
@@ -79,5 +76,59 @@ export const scrollReveal = () => {
     reset: false,
     viewOffset: { top: 100, bottom: 100 }
   });
+  scrollRevealInitialized = true;
+
+};
+export const cleanScrollRevealTargets = () => {
+  ScrollReveal().clean('.scroll__reveal, .scroll__reveal-card, .scroll__reveal-item');
 };
 
+export const applyScrollRevealToNewCards = () => {
+   if (scrollRevealInitialized) {
+  document.querySelectorAll('.scroll__reveal-card:not(.visible)')
+    .forEach(card => card.classList.add('visible'));
+  return;
+}
+
+   
+  const isMobile = window.innerWidth <= 768;
+  const defaultRevealOptions = {
+    distance: '30px',
+    origin: 'bottom',
+    easing: 'ease-out',
+    reset: false,
+    duration: 500,
+    interval: 80,
+    viewOffset: { top: 100, bottom: 100 }
+  };
+
+  if (isMobile) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.classList.add('visible');
+
+          ScrollReveal().reveal(el, {
+            ...defaultRevealOptions,
+            duration: 600,
+            delay: 100
+          });
+
+          obs.unobserve(el);
+        }
+      });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    document.querySelectorAll('.scroll__reveal-card:not(.sr)')
+      .forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.scroll__reveal-card:not(.sr)')
+      .forEach(card => card.classList.add('visible'));
+
+    ScrollReveal().reveal('.scroll__reveal-card:not(.sr)', defaultRevealOptions);
+  }
+};
