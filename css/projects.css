@@ -10,16 +10,16 @@
     flex-direction: column;
     gap: 4rem;
 }
-
+/* section-subheader */
 .section__projects-step {
     font-size: var(--font-size-sm);
     margin-bottom: 0;
 }
-
+/* section-subheader--span */
 .section__projects-step--span {
     color: var(--color-primary)
 }
-
+/* section-title */
 .section__projects-heading {
     font-size: var(--font-size-xxl);
     margin: 0;

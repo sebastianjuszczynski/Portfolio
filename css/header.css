@@ -14,13 +14,13 @@
 .header.scrolled {
   background-color: var(--color-background-scrolled);
 }
-
+/* flex-center */
 .header__nav {
   display: flex;
-  justify-content: center;
-  padding: 0 1rem;
-  gap: 1rem;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem;
 }
 
 .header__logo-text {
@@ -33,7 +33,7 @@
   letter-spacing: 2px;
   z-index: 2;
 }
-
+/* flex-center--column */
 .header__menu {
   display: flex;
   flex-direction: column;
@@ -58,7 +58,6 @@
   opacity: 1;
   transform: translateX(0);
   background-color: var(--color-background);
-  /* z-index: 1; */
 }
 
 
@@ -86,10 +85,11 @@
 .header__menu-item.active {
   color: var(--color-primary);
 }
-
+/* flex-center */
 .header__controls {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 1rem;
 }
@@ -140,10 +140,11 @@ body.light-theme .theme-icon--moon {
   position: relative;
   z-index: 10;
 }
-
+/* flex-center */
 .header__lang-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   background: transparent;
   border: 1px solid var(--color-primary);
@@ -176,12 +177,13 @@ body.light-theme .theme-icon--moon {
 .header__lang-options.show {
   display: flex;
 }
-
+/* flex-center */
 .lang-option {
   padding: 0.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
 }
 
@@ -239,7 +241,7 @@ body.light-theme .theme-icon--moon {
     background: var(--color-primary-hover);
     transform: scaleX(0);
     transform-origin: bottom left;
-    transition: transform 0.3s ease-in-out;
+    transition: transform .3s ease-in-out;
   }
 
   .header__menu-link:hover::after {
@@ -250,13 +252,16 @@ body.light-theme .theme-icon--moon {
     width: 18px;
     height: 18px;
   }
+
   .header__lang-button {
     font-size: var(--font-size-sm);
   }
+
   .lang-option {
     padding: 2px 6px;
-    transition: color .4s ease-in-out;
+    transition: background-color .2s ease-in-out;
   }
+
   .lang-option:hover {
     background-color: var(--color-primary-hover);
   }

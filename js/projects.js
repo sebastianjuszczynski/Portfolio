@@ -7,11 +7,7 @@ export const projects = [
         },
         image: "assets/images/movies-browser.png",
         tech: ["html5", "css3", "javascript", "react", "redux"],
-        link: "https://sebastianjuszczynski.github.io/movies-browser",
-        linkDescription: {
-            en: "Visit project",
-            pl: "Zobacz projekt"
-        }
+        link: "https://sebastianjuszczynski.github.io/movies-browser"
     },
       {
     title: "Weather App",
@@ -21,10 +17,6 @@ export const projects = [
     },
     image: "assets/images/weather-app.png",
     tech: ["html5", "css3", "javascript"],
-    link: "https://sebastianjuszczynski.github.io/Weather-App/",
-    linkDescription: {
-            en: "Visit project",
-            pl: "Zobacz projekt"
-        }
+    link: "https://sebastianjuszczynski.github.io/Weather-App/"
   },
 ];

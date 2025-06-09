@@ -9,7 +9,7 @@ export const renderProjects = () => {
 
     const lang = getCurrentLang();
 
-    const html = projects.map(({title, description, image, tech, link}) => `
+    const html = projects.map(({ title, description, image, tech, link }) => `
     <div class="section__projects-card scroll__reveal-card">
                         <img class="section__projects-image" src="${image}"
                             alt="${title}" loading="lazy" />

@@ -4,24 +4,26 @@
     padding: 2rem;
     text-align: center;
 }
-
+/* flex-center-column */
 .section__contact-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 4rem;
     max-width: 600px;
     margin-inline: auto;
 }
-
+/* section-subheader */
 .section__contact-step {
     font-size: var(--font-size-sm);
     margin-bottom: 0;
 }
-
+/* section-subheader--span */
 .section__contact-step--span {
     color: var(--color-primary)
 }
-
+/* section-title */
 .section__contact-heading {
     font-size: var(--font-size-xxl);
     margin: 0;
@@ -72,11 +74,11 @@ textarea:focus {
 }
 
 .input-error {
-    border: 2px solid #e53935 !important;
+    border: 2px solid #e53935;
 }
 
 .input-valid {
-    border: 2px solid #4caf50 !important;
+    border: 2px solid #4caf50;
 }
 
 .contact__form-visually--hidden {

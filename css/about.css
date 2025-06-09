@@ -7,22 +7,24 @@
     border-radius: 20px;
     text-align: center;
 }
-
+/* flex-center--column */
 .section__about--container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
 }
-
+/* section-subheader */
 .section__about--step {
     font-size: var(--font-size-sm);
     margin-bottom: 0;
 }
-
+/* section-subheader--span */
 .section__about--step-span {
     color: var(--color-primary)
 }
-
+/* section-title */
 .section__about--title {
     font-size: var(--font-size-xxl);
     margin: 0;

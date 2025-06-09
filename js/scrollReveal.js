@@ -1,8 +1,6 @@
-  let scrollRevealInitialized = false;
+let scrollRevealInitialized = false;
 
 export const scrollReveal = () => {
-
-
   const isMobile = window.innerWidth <= 768;
 
   const defaultRevealOptions = {
@@ -79,18 +77,15 @@ export const scrollReveal = () => {
   scrollRevealInitialized = true;
 
 };
-export const cleanScrollRevealTargets = () => {
-  ScrollReveal().clean('.scroll__reveal, .scroll__reveal-card, .scroll__reveal-item');
-};
 
 export const applyScrollRevealToNewCards = () => {
-   if (scrollRevealInitialized) {
-  document.querySelectorAll('.scroll__reveal-card:not(.visible)')
-    .forEach(card => card.classList.add('visible'));
-  return;
-}
+  if (scrollRevealInitialized) {
+    document.querySelectorAll('.scroll__reveal-card:not(.visible)')
+      .forEach(card => card.classList.add('visible'));
+    return;
+  }
 
-   
+
   const isMobile = window.innerWidth <= 768;
   const defaultRevealOptions = {
     distance: '30px',
