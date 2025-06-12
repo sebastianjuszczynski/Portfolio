@@ -1,32 +1,26 @@
 .section__contact {
     background-color: var(--color-background);
-    margin: 2rem 0;
-    padding: 2rem;
+    margin: var(--margin-lg);
+    padding: var(--padding-base);
     text-align: center;
 }
-/* flex-center-column */
+
 .section__contact-container {
-    gap: 4rem;
+    gap: var(--gap-xl);
     max-width: 600px;
-    margin-inline: auto;
+    margin: var(--margin-center);
 }
-/* section-subheader */
-
-/* section-subheader--span */
-
-/* section-title */
-
 
 .section__contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--gap-base);
 }
 
 .contact__form-inputs {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--gap-base);
     justify-content: center;
 }
 
@@ -44,7 +38,7 @@
 
 input,
 textarea {
-    padding: 1rem;
+    padding: var(--padding-xs);
     border: none;
     border-radius: 20px;
     background-color: var(--color-secondary);
@@ -86,11 +80,12 @@ textarea:focus {
     align-self: center;
     background-color: var(--color-primary);
     color: var(--color-text-primary);
-    padding: .5rem;
+    padding: var(--padding-button);
     border-radius: 20px;
     border: none;
     text-transform: uppercase;
     transition: background-color .4s ease-in-out;
+    font-size: var(--font-size-base);
 }
 
 

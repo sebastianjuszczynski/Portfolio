@@ -5,6 +5,8 @@
 }
 
 :root {
+
+    /* COLORS */
     --color-primary: #EF2A1A;
     --color-primary-hover: #D82518;
     --color-secondary: #1A1A1A;
@@ -14,7 +16,7 @@
     --color-text-hover: #F0F0F0;
     --color-text-secondary: #989898;
     --color-text-footer: #b8afaf;
-
+    /* FONTS */
     --font-family: 'Inter', sans-serif;
     --font-family-logo: 'Orbitron', sans-serif;
     --font-size-base: 16px;
@@ -22,13 +24,41 @@
     --font-size-lg: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-xxl: 2.5rem;
+    /* GAP */
+    --gap-xs: .25rem;
+    --gap-sm: .5rem;
+    --gap-base: 1rem;
+    --gap-lg: 2rem;
+    --gap-xl: 4rem;
+    /* MARGINS */
+    --margin-center: 0 auto;
+    --margin-base: 1rem auto;
+    --margin-lg: 2rem auto;
+    --margin-xl: 3rem auto;  
 
-    --breakpoint-mobile: 480px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1024px;
+    --margin-top-sm: .25rem;
+    --margin-top-lg: 3rem;
+    --margin-top-xl: 5rem;
+
+    --margin-bottom-sm: .5rem;
+    --margin-bottom-lg: 2rem;
+    --margin-bottom-xl: 5rem;
+    /* PADDINGS */
+    --no-padding: 0;
+    --padding-xxs: .25rem .5rem;
+    --padding-xs: 1rem;
+    --padding-sm: 1rem 1.25rem;
+    --padding-base: 2rem;
+    --padding-lg: 3rem;
+
+    --padding-header-nav: 0 1rem;
+    --padding-tech-icons: .5rem .6rem;
+    --padding-button: .5rem;
+    --padding-image: 4rem .625rem;
 
     --transition-base: all 0.5s ease;
 }
+
 .light-theme {
     --color-primary: #edfcf5;
     --color-primary-hover: #d3f8e5;
@@ -46,15 +76,15 @@ body {
     color: var(--color-text);
     transition: background-color 0.4s, color 0.4s;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
 .scroll__reveal-card {
-  opacity: 0;
+    opacity: 0;
 }
 
 .scroll__reveal-card.visible {
-  opacity: 1;
+    opacity: 1;
 }
-

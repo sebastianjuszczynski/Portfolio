@@ -1,8 +1,8 @@
 .section__skills {
     background-color: var(--color-secondary);
     width: 85%;
-    margin: 2rem auto;
-    padding: 2rem;
+    margin: var(--margin-lg);
+    padding: var(--padding-base);
     border-radius: 20px;
     text-align: center;
 }
@@ -10,49 +10,34 @@
 .section__skills-container {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: var(--gap-xl);
 }
-/* section-subheader */
-
-/* section-subheader--span */
-
-/* section-title */
-
 
 .section__skills-images--container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: var(--gap-lg);
 }
-/* flex-center */
-
-/* icons */
-
 
 .section__skills-info {
     color: var(--color-text-secondary);
     line-height: 1.4;
     max-width: 60ch;
-    margin: 1rem auto;
+    margin: var(--margin-base);
     font-size: var(--font-size-base);
 }
 
 
 @media (min-width: 768px) {
     .section__skills {
-        margin-top: 5rem;
+        margin-top: var(--margin-xl);
     }
     .section__skills-container {
-        gap: 2rem;
+        gap: var(--gap-lg);
     }
 
     .section__skills-step {
-        margin-bottom: .5rem;
-    }
-
-    .section__skills-title {
-        font-size: var(--font-size-xl);
-        margin: .5rem auto;
+        margin-bottom: var(--margin-bottom-sm);
     }
 
     .section__skills-images--container {
@@ -71,7 +56,7 @@
     }
 
     .section__skills-info {
-        margin: 1.5rem auto;
+        margin: var(--margin-base);
         font-size: var(--font-size-sm);
     }
 }
