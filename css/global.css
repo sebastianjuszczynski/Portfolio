@@ -55,6 +55,12 @@
     --padding-tech-icons: .5rem .6rem;
     --padding-button: .5rem;
     --padding-image: 4rem .625rem;
+    /* Borders */
+    --radius-sm: .25rem;
+    --radius-md: .5rem;
+    --radius-lg: 1rem;
+    --radius-full: calc(infinity * 1px);
+    --radius-rounded: 50%;
 
     --transition-base: all 0.5s ease;
 }
