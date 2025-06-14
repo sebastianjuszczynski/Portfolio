@@ -26,6 +26,7 @@ const langCode = langButton.querySelector('.lang-code');
 const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section[id]');
 const heroArrow = document.querySelector('.section__hero--arrow-container');
+const arrowUp = document.querySelector('.arrow__up-wrapper');
 
 // ====================
 // HELPERS
@@ -197,19 +198,40 @@ const setupStickyHeader = () => {
 };
 
 // ====================
+// ARROW UP
+// ====================
+const setupArrowUp = () => {
+  window.addEventListener('scroll', () => {
+    arrowUp.classList.toggle('active', window.scrollY > 300)
+  });
+
+document.addEventListener('focusin', (e) => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+    arrowUp.classList.add('blurred');
+  };
+});
+document.addEventListener('focusout', (e) => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+    arrowUp.classList.remove('blurred');
+  };
+});
+};
+
+// ====================
 // INIT
 // ====================
-const init = () => {
+function init() {
   setupMobileMenu();
   setupThemeToggle();
   setupLanguageSwitcher();
   setupScrollSpy();
   setupStickyHeader();
+  setupArrowUp();
   initContactForm();
   renderProjects();
   setLanguage(getCurrentLang());
   scrollReveal();
-  
-};
+
+}
 
 init();
