@@ -216,6 +216,23 @@ document.addEventListener('focusout', (e) => {
   };
 });
 };
+// ====================
+// LINKS HOVER
+// ====================
+const linksHover = () => {
+links.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    link.classList.remove('line-shrink');
+    link.classList.add('line-grow');
+  });
+
+  link.addEventListener('mouseleave', () => {
+    link.classList.remove('line-grow');
+    link.classList.add('line-shrink');
+  });
+});
+};
+
 
 // ====================
 // INIT
@@ -231,7 +248,7 @@ function init() {
   renderProjects();
   setLanguage(getCurrentLang());
   scrollReveal();
-
+  linksHover();
 }
 
 init();
