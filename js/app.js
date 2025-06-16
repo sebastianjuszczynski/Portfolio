@@ -27,6 +27,7 @@ const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section[id]');
 const heroArrow = document.querySelector('.section__hero--arrow-container');
 const arrowUp = document.querySelector('.arrow__up-wrapper');
+const imageContainer = document.querySelector('.section__hero-image-container');
 
 // ====================
 // HELPERS
@@ -233,6 +234,16 @@ links.forEach(link => {
 });
 };
 
+// ====================
+// IMAGE STRAIGHT
+// ====================
+
+const imageStraight = () => {
+  imageContainer.addEventListener('click', () => {
+    imageContainer.classList.toggle('clicked');
+  });
+};
+
 
 // ====================
 // INIT
@@ -249,6 +260,7 @@ function init() {
   setLanguage(getCurrentLang());
   scrollReveal();
   linksHover();
+  imageStraight();
 }
 
 init();

@@ -68,7 +68,7 @@
 .light-theme {
     --color-primary: #4f23a5;
     --color-primary-hover: #A880F9;
-    --color-gradient-hover: linear-gradient(to right, #9483b9, #4f23a5 );
+    --color-gradient-hover: linear-gradient(to right, #9672e4, #2a0a69 );
     --color-secondary: #F6F3FC;
     --gradient-main: linear-gradient(to top right, #FFFFFF, #EADFFE);
     --color-background-transparent: transparent;
