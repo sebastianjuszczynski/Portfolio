@@ -44,18 +44,6 @@
     margin: var(--margin-xl);
 }
 
-.footer__socials-link {
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: var(--radius-rounded);
-    padding: 0;
-    font-size: var(--font-size-lg);
-    text-decoration: none;
-    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-}
-
 .footer__copy {
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
