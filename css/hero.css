@@ -9,7 +9,7 @@
     text-align: center;
     justify-content: center;
     margin: var(--margin-center);
-    padding: var(--padding-base);
+    padding: var(--padding-sm);
     gap: var(--gap-base);
     color: var(--color-text);
     height: calc(100vh - 80px);
@@ -69,6 +69,7 @@
     list-style: none;
     gap: var(--gap-base);
     padding: var(--no-padding);
+    margin: var(--margin-center);
 }
 
 
