@@ -83,9 +83,11 @@
     <main class="main">
         <section class="section__hero" id="hero">
             <div class="section__hero-container">
-                <div class="section__hero-image-container scroll__reveal">
-                    <img class="section__hero-image" src="assets/images/building-a-website.svg"
-                        alt="Illustration of developer">
+                <div class="scroll__reveal">
+                    <div class="section__hero-image-container">
+                        <img class="section__hero-image" src="assets/images/building-a-website.svg"
+                            alt="Illustration of developer">
+                    </div>
                 </div>
                 <div class="section__hero-text--container flex__center-column scroll__reveal">
                     <h2 class="section__hero-text--title">
@@ -94,20 +96,28 @@
                     </h2>
                     <p class="section__hero-text--description" data-i18n="heroSubtitle">Frontend Developer focused on
                         simplicity and speed</p>
-                    <div class="section__hero-socials--container flex__center">
-                        <a href="#" class="social__icon" aria-label="LinkedIn">
-                            <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-linkedin-in"></i></span>
-                        </a>
-                        <a href="#" class="social__icon" aria-label="Github">
-                            <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-github"></i></span></a>
-                        </a>
-                        <a href="#" class="social__icon" aria-label="Facebook">
-                            <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-facebook-f"></i></span>
-                        </a>
-                        <a href="#" class="social__icon" aria-label="Instagram">
-                            <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-instagram"></i></span>
-                        </a>
-                    </div>
+                    <ul class="section__hero-socials--container flex__center">
+                        <li>
+                            <a href="#" class="social__icon" aria-label="LinkedIn">
+                                <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-linkedin-in"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social__icon" aria-label="Github">
+                                <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-github"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social__icon" aria-label="Facebook">
+                                <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-facebook-f"></i></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social__icon" aria-label="Instagram">
+                                <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-instagram"></i></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
@@ -291,14 +301,20 @@
 
                 </ul>
             </div>
-            <div class="footer__socials flex__center">
-                <a href="" class="social__icon" aria-label="Facebook"><span class="icon__wrapper"><i
-                        class="fab fa-facebook-f"></i></span></a>
-                <a href="" class="social__icon" aria-label="Instagram"><span class="icon__wrapper"><i
-                        class="fab fa-instagram"></i></span></a>
-                <a href="" class="social__icon" aria-label="Twitter"><span class="icon__wrapper"><i
-                        class="fab fa-x-twitter"></i></span></a>
-            </div>
+            <ul class="footer__socials flex__center">
+                <li>
+                    <a href="" class="social__icon" aria-label="Facebook"><span class="icon__wrapper"><i
+                                class="fab fa-facebook-f"></i></span></a>
+                </li>
+                <li>
+                    <a href="" class="social__icon" aria-label="Instagram"><span class="icon__wrapper"><i
+                                class="fab fa-instagram"></i></span></a>
+                </li>
+                <li>
+                    <a href="" class="social__icon" aria-label="Twitter"><span class="icon__wrapper"><i
+                                class="fab fa-x-twitter"></i></span></a>
+                </li>
+            </ul>
         </div>
         <p class="footer__copy"><span data-i18n="footerParagraph">&copy;All rights reserved by </span><span
                 class="footer__copy-span" data-i18n="footerSpan">Seb.dev</span></p>

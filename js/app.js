@@ -25,7 +25,6 @@ const langOptions = langDropdown.querySelector('.header__lang-options');
 const langCode = langButton.querySelector('.lang-code');
 const header = document.querySelector('.header');
 const sections = document.querySelectorAll('section[id]');
-const heroArrow = document.querySelector('.section__hero--arrow-container');
 const arrowUp = document.querySelector('.arrow__up-wrapper');
 const imageContainer = document.querySelector('.section__hero-image-container');
 
@@ -44,6 +43,15 @@ const updateLangButtonUI = (lang) => {
     currentFlag.alt = initialFlag.alt;
   };
 };
+const handleClick = () => {
+  imageContainer.classList.toggle('clicked');
+};
+const handleMouseEnter = () => {
+  imageContainer.classList.add('clicked');
+};
+const handleMouseLeave = () => {
+  imageContainer.classList.remove('clicked');
+};
 // ====================
 // MOBILE MENU
 // ====================
@@ -51,14 +59,12 @@ const toggleMenu = () => {
   mobileButton.classList.toggle('is-active');
   const isOpen = mobileMenu.classList.toggle('header__menu--open');
   mobileButton.setAttribute('aria-expanded', isOpen.toString());
-  heroArrow.classList.toggle('hidden', isOpen);
 };
 
 const closeMenu = () => {
   mobileMenu.classList.remove('header__menu--open');
   mobileButton.classList.remove('is-active');
   mobileButton.setAttribute('aria-expanded', 'false');
-  heroArrow.classList.remove('hidden');
 };
 
 const setupMobileMenu = () => {
@@ -74,7 +80,10 @@ const setupMobileMenu = () => {
     closeMenu();
   });
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) closeMenu();
+    if (window.innerWidth > 768) {
+      closeMenu();
+      imageStraight();
+    };
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeMenu();
@@ -157,10 +166,10 @@ const setupLanguageSwitcher = () => {
   });
 
   document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    langOptions.classList.remove("show");
-  }
-});
+    if (e.key === "Escape") {
+      langOptions.classList.remove("show");
+    }
+  });
 
 };
 
@@ -206,32 +215,32 @@ const setupArrowUp = () => {
     arrowUp.classList.toggle('active', window.scrollY > 300)
   });
 
-document.addEventListener('focusin', (e) => {
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-    arrowUp.classList.add('blurred');
-  };
-});
-document.addEventListener('focusout', (e) => {
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-    arrowUp.classList.remove('blurred');
-  };
-});
+  document.addEventListener('focusin', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+      arrowUp.classList.add('blurred');
+    };
+  });
+  document.addEventListener('focusout', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+      arrowUp.classList.remove('blurred');
+    };
+  });
 };
 // ====================
 // LINKS HOVER
 // ====================
 const linksHover = () => {
-links.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    link.classList.remove('line-shrink');
-    link.classList.add('line-grow');
-  });
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      link.classList.remove('line-shrink');
+      link.classList.add('line-grow');
+    });
 
-  link.addEventListener('mouseleave', () => {
-    link.classList.remove('line-grow');
-    link.classList.add('line-shrink');
+    link.addEventListener('mouseleave', () => {
+      link.classList.remove('line-grow');
+      link.classList.add('line-shrink');
+    });
   });
-});
 };
 
 // ====================
@@ -239,10 +248,21 @@ links.forEach(link => {
 // ====================
 
 const imageStraight = () => {
-  imageContainer.addEventListener('click', () => {
-    imageContainer.classList.toggle('clicked');
-  });
+  if (!imageContainer) return;
+
+  imageContainer.removeEventListener('click', handleClick);
+  imageContainer.removeEventListener('mouseenter', handleMouseEnter);
+  imageContainer.removeEventListener('mouseleave', handleMouseLeave);
+
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    imageContainer.addEventListener('click', handleClick);
+  } else {
+    imageContainer.addEventListener('mouseenter', handleMouseEnter);
+    imageContainer.addEventListener('mouseleave', handleMouseLeave);
+  };
 };
+
 
 
 // ====================
