@@ -76,6 +76,7 @@
     position: relative;
     display: inline-block;
     animation: bounce 2s infinite;
+    margin-bottom: var(--margin-bottom-xl);
 }
 
 .section__hero-arrow--container.hidden {

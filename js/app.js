@@ -256,7 +256,11 @@ const imageStraight = () => {
 
   const isMobile = window.innerWidth <= 768;
   if (isMobile) {
-    imageContainer.addEventListener('click', handleClick);
+    let isClicked = imageContainer.classList.contains('clicked');
+    imageContainer.addEventListener('click', () => {
+      isClicked = !isClicked;
+      imageContainer.classList.toggle('clicked', isClicked);
+    });
   } else {
     imageContainer.addEventListener('mouseenter', handleMouseEnter);
     imageContainer.addEventListener('mouseleave', handleMouseLeave);
