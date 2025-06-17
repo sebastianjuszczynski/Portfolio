@@ -40,8 +40,10 @@
 }
 
 .footer__socials {
+    list-style: none;
     gap: 1.5rem;
     margin: var(--margin-xl);
+    padding: var(--no-padding);
 }
 
 .footer__copy {

@@ -26,6 +26,7 @@
     padding: var(--padding-image);
     background-color: #0B1013;
     border-radius: var(--radius-lg);
+    will-change: transform;
     transform: skewX(-4deg) skewY(4deg);
     transition: transform .4s ease-in-out, box-shadow .4s ease-in-out;
 }
@@ -65,7 +66,9 @@
 }
 
 .section__hero-socials--container {
+    list-style: none;
     gap: var(--gap-base);
+    padding: var(--no-padding);
 }
 
 
