@@ -85,7 +85,7 @@
 }
 
 .section__hero-link {
-    color: red;
+    color: var(--color-primary);
 }
 
 .section__hero-arrow--icon {
