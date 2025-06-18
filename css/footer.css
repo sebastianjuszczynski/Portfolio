@@ -64,10 +64,11 @@
     position: fixed;
     bottom: 50px;
     right: 20px;
-    background: rgb(150, 114, 228, 0.3);
-    color: var(--color-background-scrolled);
+    background-color: var(--color-background-transparent);
+    color: var(--color-primary-hover);
     width: 2.5rem;
     height: 2.5rem;
+    border: 1px solid var(--color-primary-hover);
     border-radius: var(--radius-rounded);
     font-size: var(--font-size-base);
     text-decoration: none;
@@ -113,7 +114,7 @@
     z-index: 0;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
-footer .fab {
+.footer__icon-wrapper .fab {
     color: var(--color-secondary);
 }
 
@@ -157,8 +158,4 @@ footer .fab {
         color: var(--color-background);
     }
 
-    .arrow__up-wrapper:hover {
-        background: rgb(150, 114, 228, 0.6);
-        color: var(--color-text);
-    }
 }
