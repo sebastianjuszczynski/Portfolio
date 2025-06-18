@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     padding: var(--padding-base);
-    background-color: var(--color-background);
+    background-color: #2A1454;
 }
 
 .footer__container {
@@ -21,6 +21,7 @@
     font-weight: 100;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: var(--color-secondary)
 }
 
 .footer__nav {
@@ -33,7 +34,7 @@
 
 .footer__nav-link {
     text-decoration: none;
-    color: var(--color-text-footer);
+    color: var(--color-secondary);
     font-weight: 300;
     transition: color 0.4s ease-in-out;
     white-space: nowrap;
@@ -48,7 +49,7 @@
 
 .footer__copy {
     font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
+    color: var(--color-secondary);
 }
 
 .footer__copy-span {
@@ -63,8 +64,8 @@
     position: fixed;
     bottom: 50px;
     right: 20px;
-    background-color: var(--color-text);
-    color: var(--color-background);
+    background: rgb(150, 114, 228, 0.3);
+    color: var(--color-background-scrolled);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: var(--radius-rounded);
@@ -87,7 +88,43 @@
     transition: opacity 0.3s ease-in-out;
 }
 
+.footer__icon-wrapper {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
+.footer__icon-wrapper::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 0.4;
+    z-index: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+footer .fab {
+    color: var(--color-secondary);
+}
+
+.footer__icon-wrapper:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.footer__icon-wrapper:hover .fab {
+    color: var(--color-primary);
+}
 
 @media (min-width: 768px) {
     .footer__container {
@@ -112,7 +149,7 @@
     }
 
     .footer__nav-link:hover {
-        color: var(--color-text-hover)
+        color: var(--color-primary-hover)
     }
 
     .footer__socials-link:hover {
@@ -121,7 +158,7 @@
     }
 
     .arrow__up-wrapper:hover {
-        background-color: var(--color-primary);
+        background: rgb(150, 114, 228, 0.6);
         color: var(--color-text);
     }
 }

@@ -1,5 +1,5 @@
 .section__contact {
-    background-color: var(--color-background);
+    background-color: var(--color-gradient-text);
     margin: var(--margin-lg);
     padding: var(--padding-base);
     text-align: center;
@@ -41,9 +41,9 @@ textarea {
     padding: var(--padding-xs);
     border: none;
     border-radius: var(--radius-lg);
-    background-color: var(--color-secondary);
+    background-color: #e5dcf8;
     color: var(--color-text-secondary);
-    border: 2px solid transparent;
+    border: 1px solid var(--color-primary);
 }
 
 textarea {
@@ -56,11 +56,11 @@ textarea:focus {
 }
 
 .input-error {
-    border: 2px solid #e53935;
+    border: 1px solid #e53935;
 }
 
 .input-valid {
-    border: 2px solid #4caf50;
+    border: 1px solid #4caf50;
 }
 
 .contact__form-visually--hidden {
@@ -76,10 +76,13 @@ textarea:focus {
 }
 
 .contact__form-button {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
     width: 100%;
     align-self: center;
-    background-color: var(--color-primary);
-    color: var(--color-text-primary);
+    background: var(--color-gradient-text);
+    color: var(--color-secondary);
     padding: var(--padding-button);
     border-radius: var(--radius-full);
     border: none;
@@ -87,8 +90,6 @@ textarea:focus {
     transition: background-color .4s ease-in-out;
     font-size: var(--font-size-base);
 }
-
-
 
 .form__status {
     opacity: 0;
@@ -103,7 +104,6 @@ textarea:focus {
 }
 
 .error-message {
-    background-color: #ff00001a;
     display: block;
     min-height: 1rem;
     line-height: 1rem;
@@ -119,8 +119,18 @@ textarea:focus {
 }
 
 @media (min-width: 768px) {
-    .contact__form-button:hover {
-        background-color: var(--color-primary-hover);
+    .contact__form-button::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--color-gradient-hover);
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        z-index: -1;
+    }
+
+    .contact__form-button:hover::before {
+        opacity: 1;
     }
 }
 

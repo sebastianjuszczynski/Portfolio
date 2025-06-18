@@ -1,9 +1,7 @@
 .section__skills {
-    background-color: var(--color-secondary);
-    width: 85%;
+    background-color: var(--color-background-transparent);
     margin: var(--margin-lg);
     padding: var(--padding-base);
-    border-radius: var(--radius-md);
     text-align: center;
 }
 
