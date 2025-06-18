@@ -52,6 +52,7 @@
     z-index: 0;
     transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
+
 .icon__wrapper:hover::before {
     transform: scale(1);
     opacity: 1;
@@ -71,8 +72,23 @@
 }
 
 .section__title {
+    display: block;
+    background: var(--color-gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
     font-size: var(--font-size-xxl);
     margin: 0;
+}
+
+.scroll__reveal-card {
+    opacity: 0;
+}
+
+.scroll__reveal-card.visible {
+    opacity: 1;
 }
 
 @media (min-width: 768px) {

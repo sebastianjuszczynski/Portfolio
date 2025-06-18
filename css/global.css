@@ -68,33 +68,32 @@
 .light-theme {
     --color-primary: #4f23a5;
     --color-primary-hover: #A880F9;
-    --color-gradient-hover: linear-gradient(to right, #9672e4, #2a0a69 );
+    --color-gradient-text: linear-gradient(to right, 
+  #9672e4 0%, 
+  #9672e4 1%, 
+  #2a0a69 100%);
+--color-gradient-hover: linear-gradient(to right, 
+  #2a0a69 0%, 
+  #9672e4 99%, 
+  #9672e4 100%);
+
+    --color-gradient-main: linear-gradient(to top right, #FFFFFF, #EADFFE);
     --color-secondary: #F6F3FC;
-    --gradient-main: linear-gradient(to top right, #FFFFFF, #EADFFE);
     --color-background-transparent: transparent;
     --color-background-menu: #2A1454;
     --color-background-scrolled: #FFFFFF;
     --color-text:#2A1454;
     --color-text-hover: #094b3b;
     --color-text-secondary: #6B6670;
-    
 }
 
 body {
     font-family: var(--font-family);
-    background: var(--gradient-main);
+    background: var(--color-gradient-main);
     color: var(--color-text);
     transition: background-color 0.4s, color 0.4s;
 }
 
 html {
     scroll-behavior: smooth;
-}
-
-.scroll__reveal-card {
-    opacity: 0;
-}
-
-.scroll__reveal-card.visible {
-    opacity: 1;
 }
