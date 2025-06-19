@@ -7,15 +7,32 @@
 :root {
 
     /* COLORS */
-    --color-primary: #EF2A1A;
-    --color-primary-hover: #D82518;
-    --color-secondary: #1A1A1A;
-    --color-background: #000000;
+    --color-primary: #FFFFFF;
+    --color-primary-hover: #A880F9;
+    --color-gradient-text: linear-gradient(to right,
+            #8953F7 0%,
+            #8953F7 1%,
+            #c8b9e4 100%);
+    --color-gradient-hover: linear-gradient(to right,
+            #c8b9e4 0%,
+            #8953F7 99%,
+            #8953F7 100%);
+    --color-gradient-main: linear-gradient(
+  to top right,
+  #0F0715 0%,
+  #25153F 20%,
+  #0F0715 40%,
+  #25153F 60%,
+  #0F0715 80%,
+  #25153F 100%
+);
+    --color-background-transparent: transparent;
+    --color-background-menu: #2A1454;
     --color-background-scrolled: rgba(0, 0, 0, 0.8);
     --color-text: #FAFAFA;
-    --color-text-hover: #F0F0F0;
-    --color-text-secondary: #989898;
-    --color-text-footer: #b8afaf;
+    --color-text-secondary: #FAFAFA;
+    --color-socials-hover: #FFFFFF;
+
     /* FONTS */
     --font-family: 'Inter', sans-serif;
     --font-family-logo: 'Orbitron', sans-serif;
@@ -34,7 +51,7 @@
     --margin-center: 0 auto;
     --margin-base: 1rem auto;
     --margin-lg: 2rem auto;
-    --margin-xl: 3rem auto;  
+    --margin-xl: 3rem auto;
 
     --margin-top-sm: .25rem;
     --margin-top-lg: 3rem;
@@ -68,23 +85,23 @@
 .light-theme {
     --color-primary: #2A1454;
     --color-primary-hover: #A880F9;
-    --color-gradient-text: linear-gradient(to right, 
-  #9672e4 0%, 
-  #9672e4 1%, 
-  #2a0a69 100%);
---color-gradient-hover: linear-gradient(to right, 
-  #2a0a69 0%, 
-  #9672e4 99%, 
-  #9672e4 100%);
+    --color-gradient-text: linear-gradient(to right,
+            #9672e4 0%,
+            #9672e4 1%,
+            #2a0a69 100%);
+    --color-gradient-hover: linear-gradient(to right,
+            #2a0a69 0%,
+            #9672e4 99%,
+            #9672e4 100%);
 
     --color-gradient-main: linear-gradient(to top right, #FFFFFF, #EADFFE);
     --color-secondary: #F6F3FC;
     --color-background-transparent: transparent;
     --color-background-menu: #2A1454;
-    --color-background-scrolled: #FFFFFF;
-    --color-text:#2A1454;
-    --color-text-hover: #094b3b;
+    --color-background-scrolled: rgb(255, 255, 255);
+    --color-text: #2A1454;
     --color-text-secondary: #6B6670;
+    --color-socials-hover: #FFFFFF;
 }
 
 body {

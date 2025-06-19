@@ -59,7 +59,7 @@
 }
 
 .icon__wrapper:hover .fab {
-    color: #FFFFFF;
+    color: var(--color-background-scrolled);
 }
 
 .section__subheader {

@@ -32,7 +32,7 @@
 
 .section__hero-image-container.clicked {
     transform: skewX(0deg) skewY(0deg);
-    box-shadow: 0 0 0 3px var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-hover);
 }
 
 .section__hero-image {
