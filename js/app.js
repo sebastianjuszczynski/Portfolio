@@ -104,7 +104,10 @@ const setupMobileMenu = () => {
 // ====================
 const setupThemeToggle = () => {
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') body.classList.add('light-theme');
+  if (!savedTheme) {
+    body.classList.add('light-theme');
+    localStorage.setItem('theme', 'light');
+  }
 
   lightModeToggle.addEventListener('click', () => {
     const isLight = body.classList.toggle('light-theme');
