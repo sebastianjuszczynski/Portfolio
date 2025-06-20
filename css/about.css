@@ -1,6 +1,6 @@
 .section__about {
     gap: 5px;
-    background-color: var(--color-secondary);
+    background-color: var(--bg-secondary);
     margin: var(--margin-lg);
     padding: var(--padding-base);
     text-align: center;
@@ -21,8 +21,8 @@
 .section__about-link {
     display: block;
     border: none;
-    background: var(--color-gradient-text);
-    color: var(--color-secondary);
+    background: var(--gradient-accent);
+    color: var(--color-text-white);
     text-decoration: none;
     padding: var(--padding-sm);
     border-radius: var(--radius-full);
@@ -34,10 +34,10 @@
 }
 
 .section__about-image--container {
-    background-color: var(--color-background-transparent);
+    background-color: var(--bg-transparent);
     padding: var(--padding-image);
     border-radius: var(--radius-md);
-    border: 2px solid var(--color-primary-hover);
+    border: 2px solid var(--color-accent-hover);
 }
 
 .section__about-image {
@@ -86,7 +86,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: var(--color-gradient-hover);
+        background: var(--gradient-accent-hover);
         opacity: 0;
         transition: opacity 0.4s ease-in-out;
         z-index: -1;

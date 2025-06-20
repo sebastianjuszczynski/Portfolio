@@ -6,34 +6,39 @@
 
 :root {
 
-    /* COLORS */
-    --color-primary: #FFFFFF;
-    --color-primary-hover: #A880F9;
-    --color-gradient-text: linear-gradient(to right,
-            #8953F7 0%,
-            #8953F7 1%,
-            #c8b9e4 100%);
-    --color-gradient-hover: linear-gradient(to right,
-            #c8b9e4 0%,
-            #8953F7 99%,
-            #8953F7 100%);
-    --color-gradient-main: linear-gradient(
-  to top right,
-  #0F0715 0%,
-  #25153F 20%,
-  #0F0715 40%,
-  #25153F 60%,
-  #0F0715 80%,
-  #25153F 100%
-);
-    --color-background-transparent: transparent;
-    --color-background-menu: #2A1454;
-    --color-background-scrolled: rgba(0, 0, 0, 0.8);
-    --color-text: #FAFAFA;
-    --color-text-secondary: #FAFAFA;
-    --color-socials-hover: #FFFFFF;
+    /* ========== COLORS: TEXT ========== */
+    --color-text-main: #FAFAFA;
+    --color-text-secondary: #7f7985;
+    --color-text-white: #FFFFFF;
 
-    /* FONTS */
+    /* ========== COLORS: BRAND / ACCENTS ========== */
+    --color-accent: #FFFFFF;
+    --color-accent-hover: #A880F9;
+
+    /* ========== COLORS: BACKGROUNDS ========== */
+    --bg-main: linear-gradient(to top right,
+            #0F0715 0%,
+            #25153F 20%,
+            #0F0715 40%,
+            #25153F 60%,
+            #0F0715 80%,
+            #25153F 100%);
+    --bg-transparent: transparent;
+    --bg-menu-mobile: #2A1454;
+    --bg-header-scrolled: rgba(0, 0, 0, 0.8);
+    --bg-inputs: #e5dcf8;
+    /* ========== GRADIENTS ========== */
+    --gradient-accent: linear-gradient(to right,
+            #5d27ca 0%,
+            #7b4ed1 50%,
+            #9672d9 100%);
+    --gradient-accent-hover: linear-gradient(to right,
+            #9672d9 0%,
+            #7b4ed1 50%,
+            #5d27ca 100%);
+
+
+     /* ========== TYPOGRAPHY ========== */
     --font-family: 'Inter', sans-serif;
     --font-family-logo: 'Orbitron', sans-serif;
     --font-size-base: 16px;
@@ -41,13 +46,13 @@
     --font-size-lg: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-xxl: 2.5rem;
-    /* GAP */
+    /* ========== SPACING ========== */
     --gap-xs: .25rem;
     --gap-sm: .5rem;
     --gap-base: 1rem;
     --gap-lg: 2rem;
     --gap-xl: 4rem;
-    /* MARGINS */
+    
     --margin-center: 0 auto;
     --margin-base: 1rem auto;
     --margin-lg: 2rem auto;
@@ -60,7 +65,7 @@
     --margin-bottom-sm: .5rem;
     --margin-bottom-lg: 2rem;
     --margin-bottom-xl: 5rem;
-    /* PADDINGS */
+    
     --no-padding: 0;
     --padding-xxs: .25rem .5rem;
     --padding-xs: 1rem;
@@ -72,42 +77,44 @@
     --padding-tech-icons: .5rem .6rem;
     --padding-button: .5rem;
     --padding-image: 4rem .625rem;
-    /* Borders */
+    /* ========== BORDERS ========== */
     --radius-sm: .25rem;
     --radius-md: .5rem;
     --radius-lg: 1rem;
     --radius-full: calc(infinity * 1px);
     --radius-rounded: 50%;
-
+    /* ========== TRANSITIONS ========== */
     --transition-base: all 0.5s ease;
 }
 
+/* ========== LIGHT THEME OVERRIDES ========== */
+
 .light-theme {
-    --color-primary: #2A1454;
-    --color-primary-hover: #A880F9;
-    --color-gradient-text: linear-gradient(to right,
+    --color-accent: #2A1454;
+    --color-accent-hover: #A880F9;
+
+    --gradient-accent: linear-gradient(to right,
             #9672e4 0%,
-            #9672e4 1%,
             #2a0a69 100%);
-    --color-gradient-hover: linear-gradient(to right,
+    --gradient-accent-hover: linear-gradient(to right,
             #2a0a69 0%,
-            #9672e4 99%,
             #9672e4 100%);
 
-    --color-gradient-main: linear-gradient(to top right, #FFFFFF, #EADFFE);
-    --color-secondary: #F6F3FC;
-    --color-background-transparent: transparent;
-    --color-background-menu: #2A1454;
-    --color-background-scrolled: rgb(255, 255, 255);
-    --color-text: #2A1454;
+    --bg-main: linear-gradient(to top right, #FFFFFF, #EADFFE);
+    --bg-menu-mobile: #2A1454;
+    --bg-header-scrolled: rgb(255, 255, 255);
+    --bg-secondary: #F6F3FC;
+
+    --color-text-main: #2A1454;
     --color-text-secondary: #6B6670;
-    --color-socials-hover: #FFFFFF;
 }
+
+/* ========== BASE STYLES ========== */
 
 body {
     font-family: var(--font-family);
-    background: var(--color-gradient-main);
-    color: var(--color-text);
+    background: var(--bg-main);
+    color: var(--color-text-main);
     transition: background-color 0.4s, color 0.4s;
 }
 

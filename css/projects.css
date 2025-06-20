@@ -1,5 +1,5 @@
 .section__projects {
-    background-color: var(--color-secondary);
+    background-color: var(--bg-secondary);
     margin: var(--margin-lg);
     padding: var(--padding-base);
     text-align: center;
@@ -18,7 +18,7 @@
     align-items: flex-start;
     gap: var(--gap-lg);
     border-radius: var(--radius-md);
-    background-color: var(--color-secondary);
+    background: var(--bg-main);
     padding: var(--padding-base);
     margin-bottom: var(--margin-bottom-lg);
 }
@@ -39,7 +39,7 @@
 .section__projects-title {
     font-size: var(--font-size-lg);
     margin: 0;
-    color: var(--color-primary)
+    color: var(--color-accent)
 }
 
 .section__projects-description {
@@ -53,7 +53,7 @@
     align-items: center;
     padding: var(--padding-tech-icons);
     gap: var(--gap-sm);
-    background: var(--color-gradient-text);
+    background: var(--gradient-accent);
     border-radius: var(--radius-full);
     margin: 1rem 0;
     width: fit-content;
@@ -66,7 +66,7 @@
 
 .section__projects-link {
     text-decoration: none;
-    color: var(--color-primary);
+    color: var(--color-accent);
     font-size: var(--font-size-base);
     display: inline-flex;
     align-items: center;
@@ -127,6 +127,6 @@
     }
 
     .section__projects-link:hover {
-        color: var(--color-primary-hover);
+        color: var(--color-accent-hover);
     }
 }

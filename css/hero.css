@@ -11,7 +11,7 @@
     margin: var(--margin-center);
     padding: var(--padding-sm);
     gap: var(--gap-base);
-    color: var(--color-text);
+    color: var(--color-text-main);
     height: calc(100vh - 80px);
     background-position: center;
     background-size: cover;
@@ -32,7 +32,7 @@
 
 .section__hero-image-container.clicked {
     transform: skewX(0deg) skewY(0deg);
-    box-shadow: 0 0 0 2px var(--color-primary-hover);
+    box-shadow: 0 0 0 2px var(--color-accent-hover);
 }
 
 .section__hero-image {
@@ -50,7 +50,7 @@
 
 .section__hero-text--span {
     display: block;
-    background: var(--color-gradient-text);
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -86,7 +86,7 @@
 }
 
 .section__hero-link {
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .section__hero-arrow--icon {

@@ -4,13 +4,13 @@
   left: 0;
   right: 0;
   height: 80px;
-  background-color: var(--color-background-transparent);
+  background-color: var(--bg-transparent);
   transition: background-color 0.4s, color 0.4s;
-  z-index: 9;
+  z-index: 99999;
 }
 
 .header.scrolled {
-  background-color: var(--color-background-scrolled);
+  background-color: var(--bg-header-scrolled);
 }
 
 .header__nav {
@@ -23,7 +23,7 @@
   font-family: var(--font-family-logo);
   font-size: var(--font-size-xl);
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-accent);
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
@@ -48,7 +48,7 @@
 .header__menu--open {
   opacity: 1;
   transform: translateX(0);
-  background-color: var(--color-background-menu);
+  background-color: var(--bg-menu-mobile);
 }
 
 
@@ -61,14 +61,14 @@
 .header__menu-link {
   display: block;
   text-decoration: none;
-  color: var(--color-secondary);
+  color: var(--bg-secondary);
   font-size: var(--font-size-xl);
   padding: var(--padding-sm);
   transition: color .3s ease-in-out;
 }
 
 .header__menu-item.active .header__menu-link {
-  color: var(--color-primary-hover);
+  color: var(--color-accent-hover);
 }
 
 .header__menu-link::after {
@@ -113,7 +113,7 @@ body.light-theme .theme-icon--moon {
   height: 2.5rem;
   background: none;
   border: none;
-  color: var(--color-primary);
+  color: var(--color-accent);
   cursor: pointer;
   transition: color 0.3s ease;
   z-index: 1;
@@ -129,8 +129,8 @@ body.light-theme .theme-icon--moon {
 .header__lang-button {
   gap: var(--gap-sm);
   background: transparent;
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
   border-radius: var(--radius-sm);
   cursor: pointer;
   font-size: var(--font-size-lg);
@@ -145,8 +145,8 @@ body.light-theme .theme-icon--moon {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: var(--color-background-transparent);
-  border: 2px solid var(--color-text);
+  background-color: var(--bg-transparent);
+  border: 2px solid var(--color-text-main);
   border-radius: var(--radius-sm);
   list-style: none;
   display: none;
@@ -193,7 +193,7 @@ body.light-theme .theme-icon--moon {
     font-size: var(--font-size-sm);
     padding: var(--padding-sm);
     transition: color .4s ease-in-out;
-    color: var(--color-text);
+    color: var(--color-text-main);
     transition: color .3s ease-in-out;
   }
 
@@ -205,7 +205,7 @@ body.light-theme .theme-icon--moon {
     bottom: 10px;
     width: 80%;
     height: 2px;
-    background: var(--color-gradient-hover);
+    background: var(--gradient-accent-hover);
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
   }
@@ -235,7 +235,7 @@ body.light-theme .theme-icon--moon {
   }
 
   .lang-option:hover {
-    background-color: var(--color-primary-hover);
+    background-color: var(--color-accent-hover);
   }
 
 }

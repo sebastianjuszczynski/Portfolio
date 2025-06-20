@@ -1,5 +1,5 @@
 .section__skills {
-    background-color: var(--color-background-transparent);
+    background-color: var(--bg-transparent);
     margin: var(--margin-lg);
     padding: var(--padding-base);
     text-align: center;
