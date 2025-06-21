@@ -104,11 +104,10 @@ const setupMobileMenu = () => {
 // ====================
 const setupThemeToggle = () => {
   const savedTheme = localStorage.getItem('theme');
-  if (!savedTheme) {
+  if (!savedTheme || savedTheme === 'light') {
     body.classList.add('light-theme');
     localStorage.setItem('theme', 'light');
-  }
-
+  };
   lightModeToggle.addEventListener('click', () => {
     const isLight = body.classList.toggle('light-theme');
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
@@ -189,8 +188,10 @@ const activateScrollSpy = () => {
     if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
       links.forEach(link => {
         link.parentElement.classList.remove('active');
+        link.removeAttribute('aria-current');
         if (link.getAttribute('href') === `#${sectionId}`) {
           link.parentElement.classList.add('active');
+          link.setAttribute('aria-current', 'page');
         };
       });
     };
