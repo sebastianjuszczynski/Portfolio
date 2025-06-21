@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/images/site.webmanifest" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -86,7 +91,7 @@
                 <div class="scroll__reveal">
                     <div class="section__hero-image-container">
                         <img class="section__hero-image" src="assets/images/building-a-website.svg"
-                            alt="Illustration of developer">
+                            alt="Developer writing code">
                     </div>
                 </div>
                 <div class="section__hero-text--container flex__center-column scroll__reveal">
@@ -98,37 +103,41 @@
                         simplicity and speed</p>
                     <ul class="section__hero-socials--container flex__center">
                         <li>
-                            <a href="#" class="social__icon" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/in/sebastian-juszczynski-52982a243/" target="_blank"
+                                class="social__icon" aria-label="LinkedIn">
                                 <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-linkedin-in"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="social__icon" aria-label="Github">
+                            <a href="https://github.com/sebastianjuszczynski" target="_blank" class="social__icon"
+                                aria-label="Github">
                                 <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-github"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="social__icon" aria-label="Facebook">
+                            <a href="https://www.facebook.com/sebastian.juszczynski.3/" target="_blank"
+                                class="social__icon" aria-label="Facebook">
                                 <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-facebook-f"></i></span>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="social__icon" aria-label="Instagram">
+                            <a href="https://www.instagram.com/sjuszczynski/" target="_blank" class="social__icon"
+                                aria-label="Instagram">
                                 <span class="icon__wrapper"><i aria-hidden="true" class="fab fa-instagram"></i></span>
                             </a>
                         </li>
                     </ul>
-                </div> 
+                </div>
             </div>
             <div class="section__hero-arrow--container scroll__reveal">
-                    <a href="#about" class="section__hero-link" aria-label="Scroll to skills section">
-                        <svg class="section__hero-arrow--icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 320 512">
-                            <path fill="currentColor"
-                                d="M143 352.3L7 216.3C-2.3 206.1-2.3 189.9 7 179.6s23.6-9.4 32.9 0L160 300.7 280.1 179.6c9.3-9.3 24.5-9.3 33.8 0s9.3 24.5 0 33.8L177 352.3c-9.4 9.4-24.6 9.4-34 0z" />
-                        </svg>
-                    </a>
-                </div>
+                <a href="#about" class="section__hero-link" aria-label="Scroll to skills section">
+                    <svg class="section__hero-arrow--icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                            d="M143 352.3L7 216.3C-2.3 206.1-2.3 189.9 7 179.6s23.6-9.4 32.9 0L160 300.7 280.1 179.6c9.3-9.3 24.5-9.3 33.8 0s9.3 24.5 0 33.8L177 352.3c-9.4 9.4-24.6 9.4-34 0z" />
+                    </svg>
+                </a>
+            </div>
         </section>
 
         <section class="section__about scroll__reveal" id="about">
@@ -149,7 +158,7 @@
                     <a href="#contact" class="section__about-link" data-i18n="aboutButton">Contact Me</a>
                 </div>
                 <div class="section__about-image--container">
-                    <img src="assets/images/code-thinking.svg" alt="Illustration of developer"
+                    <img src="assets/images/code-thinking.svg" alt="Developer thinking about code"
                         class="section__about-image">
                 </div>
             </div>
@@ -165,70 +174,69 @@
                     <h2 class="section__title" data-i18n="skillsTitle">Skills</h2>
                 </div>
                 <div class="section__skills-images--container">
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="HTML">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="HTML">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
                             class="icons" alt="HTML logo" />
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="CSS">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="CSS">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
                             alt="CSS logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="JavaScript">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="JavaScript">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
                             alt="JavaScript logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Sass">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Sass">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
                             alt="Sass logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="React">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="React">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
                             alt="React logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Next.js">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Next.js">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
                             alt="Next.js logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="TypeScript">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="TypeScript">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
                             alt="TypeScript logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Git">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Git">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
                             alt="Git logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Github">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Github">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
                             alt="Github logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="NPM">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="NPM">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
                             alt="NPM logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Firebase">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Firebase">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
                             alt="Firebase logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Redux">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Redux">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
                             alt="Redux logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Axios">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Axios">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg"
                             alt="Axios logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Markdown">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Markdown">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg"
                             alt="Markdown logo" class="icons">
                     </div>
-                    <div class="section__skills-item flex-center scroll__reveal-item" title="Figma">
+                    <div class="section__skills-item flex__center scroll__reveal-item" title="Figma">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
                             alt="Figma logo" class="icons">
                     </div>
                 </div>
                 <p class="section__skills-info" data-i18n="skillsInfo">Visit the projects section to see the work done
-                    with
-                    there web technologies.
+                    with these web technologies.
                 </p>
             </div>
         </section>
@@ -261,18 +269,21 @@
                     <div class="contact__form-inputs">
                         <div class="contact__form-input--wrapper">
                             <label for="name" class="contact__form-visually--hidden">Name</label>
-                            <input type="text" name="name" required data-i18n-placeholder="contactName">
+                            <input type="text" name="name" id="name" required data-i18n-placeholder="contactName"
+                                placeholder="Your name">
                             <small class="error-message"></small>
                         </div>
                         <div class="contact__form-input--wrapper">
-                            <label for="email" class="contact__form-visually--hidden">Name</label>
-                            <input type="email" name="email" required data-i18n-placeholder="contactEmail">
+                            <label for="email" class="contact__form-visually--hidden">Email</label>
+                            <input type="email" name="email" id="email" required data-i18n-placeholder="contactEmail"
+                                placeholder="Your email">
                             <small class="error-message"></small>
                         </div>
                     </div>
                     <div class="contact__form-textarea--wrapper">
-                        <label for="message" class="contact__form-visually--hidden">Name</label>
-                        <textarea name="message" required data-i18n-placeholder="contactMessage" rows="6"></textarea>
+                        <label for="message" class="contact__form-visually--hidden">Your message</label>
+                        <textarea name="message" id="message" required data-i18n-placeholder="contactMessage" rows="6"
+                            placeholder="Enter your message"></textarea>
                         <small class="error-message"></small>
                     </div>
                     <button class="contact__form-button" type="submit" data-i18n="contactFormButton">Send</button>
@@ -280,6 +291,8 @@
                 </form>
             </div>
         </section>
+        <a href="#hero" class="arrow__up-wrapper" aria-label="Scroll to top" role="button" tabindex="0"><i
+                class="fa-solid fa-arrow-up fa-bounce"></i></a>
     </main>
 
     <footer class="footer flex__center-column">
@@ -287,7 +300,7 @@
             <div class="footer__nav-container">
                 <h3 class="footer__header">Seb.dev</h3>
                 <ul class="footer__nav flex__center">
-                    <li class="footer__nav-item"><a href="#" class="footer__nav-link" data-i18n="footerHome">Home</a>
+                    <li class="footer__nav-item"><a href="#hero" class="footer__nav-link" data-i18n="footerHome">Home</a>
                     </li>
                     <li class="footer__nav-item"><a href="#about" class="footer__nav-link"
                             data-i18n="footerAbout">About</a></li>
@@ -295,23 +308,26 @@
                             data-i18n="footerSkills">Skills</a></li>
                     <li class="footer__nav-item"><a href="#projects" class="footer__nav-link"
                             data-i18n="footerProjects">Projects</a></li>
-                    <li class="footer__nav-item"><a href="#Contact" class="footer__nav-link"
+                    <li class="footer__nav-item"><a href="#contact" class="footer__nav-link"
                             data-i18n="footerContact">Contact</a></li>
 
                 </ul>
             </div>
             <ul class="footer__socials flex__center">
                 <li>
-                    <a href="" class="social__icon" aria-label="Facebook"><span class="footer__icon-wrapper"><i
+                    <a href="https://www.facebook.com/sebastian.juszczynski.3/" target="_blank" class="social__icon"
+                        aria-label="Facebook"><span class="footer__icon-wrapper"><i
                                 class="fab fa-facebook-f"></i></span></a>
                 </li>
                 <li>
-                    <a href="" class="social__icon" aria-label="Instagram"><span class="footer__icon-wrapper"><i
+                    <a href="https://www.instagram.com/sjuszczynski/" target="_blank" class="social__icon"
+                        aria-label="Instagram"><span class="footer__icon-wrapper"><i
                                 class="fab fa-instagram"></i></span></a>
                 </li>
                 <li>
-                    <a href="" class="social__icon" aria-label="Twitter"><span class="footer__icon-wrapper"><i
-                                class="fab fa-x-twitter"></i></span></a>
+                    <a href="https://www.linkedin.com/in/sebastian-juszczynski-52982a243/" target="_blank"
+                        class="social__icon" aria-label="Twitter"><span class="footer__icon-wrapper"><i
+                                class="fab fa-linkedin-in"></i></span></a>
                 </li>
             </ul>
         </div>
@@ -326,8 +342,7 @@
             <path d="M14 11a5 5 0 0 1 0 7l-1 1a5 5 0 0 1-7-7l1-1" />
         </symbol>
     </svg>
-    <?xml version="1.0" ?>
-    <a href="#hero" class="arrow__up-wrapper"><i class="fa-solid fa-arrow-up fa-bounce"></i></a>
+
 </body>
 
 </html>
