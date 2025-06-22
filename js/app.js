@@ -9,6 +9,7 @@ import { scrollReveal, applyScrollRevealToNewCards } from "./scrollReveal.js";
 import { debounce } from "./utils.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderSkills } from "./renderSkills.js";
+import { renderFormFields } from "./renderForm.js";
 import { getCurrentLang } from "./utils.js";
 
 // ====================
@@ -284,6 +285,7 @@ function init() {
   setupScrollSpy();
   setupStickyHeader();
   setupArrowUp();
+  renderFormFields();
   initContactForm();
   renderSkills();
   renderProjects();
