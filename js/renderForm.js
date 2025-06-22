@@ -12,7 +12,7 @@ export const renderFormFields = () => {
         .filter(({ type }) => type !== "textarea")
         .map(({ name, type, placeholder, i18n }) => `
         <div class="contact__form-input--wrapper">
-                            <label for="${name}" class="contact__form-visually--hidden">${name}</label>
+                            <label for="${name}" class="contact__form-visually--hidden">${placeholder[lang]}</label>
                             <input type="${type}" name="${name}" id="${name}" required data-i18n-placeholder="${i18n}"
                                 placeholder="${placeholder[lang]}">
                             <small class="error-message"></small>
@@ -24,10 +24,10 @@ export const renderFormFields = () => {
 
     const textareaHTML = formFields
         .filter(({ type }) => type === "textarea")
-        .map(({ name, type, placeholder, i18n }) => `
+        .map(({ name, placeholder, i18n }) => `
         
-                            <label for="${name}" class="contact__form-visually--hidden">${name}</label>
-                            <textarea type="${type}" name="${name}" id="${name}" required data-i18n-placeholder="${i18n}"
+                            <label for="${name}" class="contact__form-visually--hidden">${placeholder[lang]}</label>
+                            <textarea name="${name}" id="${name}" required data-i18n-placeholder="${i18n}"
                                 placeholder="${placeholder[lang]}" rows="6"></textarea>
                             <small class="error-message"></small>
                         
