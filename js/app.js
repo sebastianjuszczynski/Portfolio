@@ -8,6 +8,7 @@ import { initContactForm } from './form/contact.js';
 import { scrollReveal, applyScrollRevealToNewCards } from "./scrollReveal.js";
 import { debounce } from "./utils.js";
 import { renderProjects } from "./renderProjects.js";
+import { renderSkills } from "./renderSkills.js";
 import { getCurrentLang } from "./utils.js";
 
 // ====================
@@ -284,6 +285,7 @@ function init() {
   setupStickyHeader();
   setupArrowUp();
   initContactForm();
+  renderSkills();
   renderProjects();
   setLanguage(getCurrentLang());
   scrollReveal();
