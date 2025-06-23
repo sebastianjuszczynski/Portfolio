@@ -96,7 +96,6 @@ textarea:focus {
     transition: opacity 0.4s ease-in-out;
     text-align: left;
     font-weight: bold;
-
 }
 
 .form__status.show-message {
@@ -118,22 +117,6 @@ textarea:focus {
     opacity: 1;
 }
 
-@media (min-width: 768px) {
-    .contact__form-button::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: var(--gradient-accent-hover);
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out;
-        z-index: -1;
-    }
-
-    .contact__form-button:hover::before {
-        opacity: 1;
-    }
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -147,4 +130,20 @@ textarea:-webkit-autofill {
 input:-moz-autofill {
     background-color: #161616 !important;
     color: white !important;
+}
+
+@media (min-width: 1024px) {
+    .contact__form-button::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--gradient-accent-hover);
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        z-index: -1;
+    }
+
+    .contact__form-button:hover::before {
+        opacity: 1;
+    }
 }

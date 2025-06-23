@@ -91,7 +91,19 @@
     opacity: 1;
 }
 
+@media (max-width: 360px) {
+    .section__title {
+        font-size: var(--font-size-xl);
+    }
+}
+
 @media (min-width: 768px) {
+    .fab {
+        font-size: var(--font-size-lg);
+    }
+}
+
+@media (min-width: 1024px) {
     .section__subheader {
         margin-bottom: .5rem;
     }
@@ -105,4 +117,7 @@
         height: 28px;
     }
 
+    .fab {
+        font-size: var(--font-size-base);
+    }
 }

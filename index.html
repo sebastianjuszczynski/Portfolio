@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sebastian Juszczyński - Frontend Developer skilled in HTML, CSS, JavaScript, React. View my web projects and contact me.">
     <link rel="icon" type="image/png" href="assets/images/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
@@ -15,9 +17,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap"
-        rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+        onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+    </noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/utilities.css">
@@ -29,7 +33,7 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js" defer></script>
 </head>
 
 <body>
@@ -66,7 +70,7 @@
                     <button class="header__lang-button flex__center" type="button" aria-haspopup="listbox"
                         aria-expanded="false">
                         <img src="assets/icons/gb.svg" alt="English" class="lang-flag" />
-                        <span class="lang-code">EN</span>
+                        <span class="lang-code"> EN</span>
                     </button>
                     <ul class="header__lang-options" role="listbox">
                         <li class="lang-option flex__center" data-lang="en">
@@ -160,7 +164,7 @@
                 </div>
                 <div class="section__about-image--container">
                     <img src="assets/images/code-thinking.svg" alt="Developer thinking about code"
-                        class="section__about-image">
+                        class="section__about-image" loading="lazy">
                 </div>
             </div>
         </section>
@@ -225,7 +229,8 @@
             <div class="footer__nav-container">
                 <h3 class="footer__header">Seb.dev</h3>
                 <ul class="footer__nav flex__center">
-                    <li class="footer__nav-item"><a href="#hero" class="footer__nav-link" data-i18n="footerHome">Home</a>
+                    <li class="footer__nav-item"><a href="#hero" class="footer__nav-link"
+                            data-i18n="footerHome">Home</a>
                     </li>
                     <li class="footer__nav-item"><a href="#about" class="footer__nav-link"
                             data-i18n="footerAbout">About</a></li>

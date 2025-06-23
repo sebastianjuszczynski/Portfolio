@@ -38,21 +38,22 @@
             #5d27ca 100%);
 
 
-     /* ========== TYPOGRAPHY ========== */
+    /* ========== TYPOGRAPHY ========== */
     --font-family: 'Inter', sans-serif;
     --font-family-logo: 'Orbitron', sans-serif;
     --font-size-base: 16px;
     --font-size-sm: 0.875rem;
-    --font-size-lg: 1.25rem;
-    --font-size-xl: 1.5rem;
+    --font-size-lg: 1.5rem;
+    --font-size-xl: 2rem;
     --font-size-xxl: 2.5rem;
     /* ========== SPACING ========== */
+
     --gap-xs: .25rem;
     --gap-sm: .5rem;
     --gap-base: 1rem;
     --gap-lg: 2rem;
     --gap-xl: 4rem;
-    
+
     --margin-center: 0 auto;
     --margin-base: 1rem auto;
     --margin-lg: 2rem auto;
@@ -65,14 +66,16 @@
     --margin-bottom-sm: .5rem;
     --margin-bottom-lg: 2rem;
     --margin-bottom-xl: 5rem;
-    
+
     --no-padding: 0;
+    --padding-xxxs: .25rem .25rem;
     --padding-xxs: .25rem .5rem;
     --padding-xs: 1rem;
     --padding-sm: 1rem 1.25rem;
-    --padding-base: 2rem;
+    --padding-base: 2rem 2rem .5rem 2rem;
     --padding-lg: 3rem;
 
+    --padding-header-nav-sm: 0 .5rem;
     --padding-header-nav: 0 1rem;
     --padding-tech-icons: .5rem .6rem;
     --padding-button: .5rem;
@@ -121,19 +124,21 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 1000;
-  transition: top 0.3s ease;
-  font-size: 14px;
-  border-radius: 4px;
-  text-decoration: none;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px 16px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
 }
+
 .skip-link:focus {
-  top: 50px;
+    top: 50px;
 }
