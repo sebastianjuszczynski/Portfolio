@@ -24,10 +24,10 @@
     background: var(--gradient-accent);
     color: var(--color-text-white);
     text-decoration: none;
-    padding: var(--padding-sm);
+    padding: var(--padding-button);
     border-radius: var(--radius-full);
     cursor: pointer;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     font-weight: bold;
     width: 70%;
     margin: var(--margin-lg);

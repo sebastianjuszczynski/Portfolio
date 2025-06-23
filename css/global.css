@@ -79,7 +79,7 @@
     --padding-header-nav: 0 1rem;
     --padding-tech-icons: .5rem .6rem;
     --padding-button: .5rem;
-    --padding-image: 4rem .625rem;
+    --padding-image: 2rem .625rem;
     /* ========== BORDERS ========== */
     --radius-sm: .25rem;
     --radius-md: .5rem;
@@ -132,7 +132,7 @@ html {
     background: #000;
     color: #fff;
     padding: 8px 16px;
-    z-index: 1000;
+    z-index: 2;
     transition: top 0.3s ease;
     font-size: 14px;
     border-radius: 4px;

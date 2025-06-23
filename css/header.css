@@ -5,8 +5,8 @@
   right: 0;
   height: 80px;
   background-color: var(--bg-transparent);
-  transition: background-color 0.4s, color 0.4s;
-  z-index: 99999;
+  transition: background-color 0.3s, color 0.4s;
+  z-index: 1;
 }
 
 .header.scrolled {
@@ -22,12 +22,10 @@
   margin-right: auto;
   font-family: var(--font-family-logo);
   font-size: var(--font-size-lg);
-  font-weight: 600;
   color: var(--color-accent);
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
-  z-index: 2;
 }
 
 .header__menu {
@@ -62,7 +60,7 @@
   display: block;
   text-decoration: none;
   color: var(--bg-secondary);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   padding: var(--padding-sm);
   transition: color .3s ease-in-out;
   white-space: nowrap;
@@ -117,14 +115,13 @@ body.light-theme .theme-icon--moon {
   color: var(--color-accent);
   cursor: pointer;
   transition: color 0.3s ease;
-  z-index: 1;
   overflow: hidden;
   outline: none;
 }
 
 .header__lang-dropdown {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 .header__lang-button {
@@ -180,7 +177,7 @@ body.light-theme .theme-icon--moon {
   }
 
   .header__menu-link {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
   }
 
   .theme-icon {
@@ -213,10 +210,6 @@ body.light-theme .theme-icon--moon {
   .header {
     height: 50px;
     padding: var(--no-padding);
-  }
-
-  .header__logo-text {
-    font-weight: 100;
   }
 
   .header__nav {
