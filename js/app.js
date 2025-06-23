@@ -60,6 +60,7 @@ const handleMouseLeave = () => {
 const toggleMenu = () => {
   mobileButton.classList.toggle('is-active');
   const isOpen = mobileMenu.classList.toggle('header__menu--open');
+  document.body.classList.toggle("no-scroll");
   mobileButton.setAttribute('aria-expanded', isOpen.toString());
 };
 

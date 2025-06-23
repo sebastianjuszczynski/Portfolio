@@ -142,3 +142,7 @@ html {
 .skip-link:focus {
     top: 50px;
 }
+.no-scroll {
+  overflow: hidden;
+  height: 100svh;
+}
