@@ -23,6 +23,7 @@
             #25153F 60%,
             #0F0715 80%,
             #25153F 100%);
+    --bg-hero-image: #0B1013;
     --bg-transparent: transparent;
     --bg-menu-mobile: #2A1454;
     --bg-header-scrolled: rgba(0, 0, 0, 0.8);
@@ -68,12 +69,12 @@
     --margin-bottom-xl: 7rem;
 
     --no-padding: 0;
-    --padding-xxxs: .25rem .25rem;
-    --padding-xxs: .25rem .5rem;
-    --padding-xs: 1rem;
-    --padding-sm: 1rem 1.25rem;
-    --padding-base: 2rem 2rem .5rem 2rem;
-    --padding-lg: 3rem;
+    --padding-xs: .25rem .25rem;
+    --padding-sm: .25rem .5rem;
+    --padding-base: 1rem;
+    --padding-lg: 1rem 1.25rem;
+    --padding-xl: 2rem 2rem .5rem 2rem;
+    --padding-xxl: 3rem;
 
     --padding-header-nav-sm: 0 .5rem;
     --padding-header-nav: 0 1rem;
@@ -82,12 +83,17 @@
     --padding-image: 2rem .625rem;
     /* ========== BORDERS ========== */
     --radius-sm: .25rem;
-    --radius-md: .5rem;
+    --radius-base: .5rem;
     --radius-lg: 1rem;
-    --radius-full: calc(infinity * 1px);
+    --radius-full: 9999px;
     --radius-rounded: 50%;
     /* ========== TRANSITIONS ========== */
-    --transition-base: all 0.5s ease;
+    --transition-opacity: opacity .4s ease-in-out;
+    --transition-color: color .4s ease-in-out;
+    --transition-transform: transform 0.4s ease-in-out;
+    --transition-bg: background-color 0.4s ease-in-out;
+    --transition-top: top 0.4s ease-in-out;
+    --transition-all: all .4s ease-in-out;
 }
 
 /* ========== LIGHT THEME OVERRIDES ========== */
@@ -118,11 +124,16 @@ body {
     font-family: var(--font-family);
     background: var(--bg-main);
     color: var(--color-text-main);
-    transition: background-color 0.4s, color 0.4s;
+    transition: var(--transition-all);
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.main {
+    padding-top: 80px;
+    margin: var(--margin-center);
 }
 
 .skip-link {
@@ -133,7 +144,7 @@ html {
     color: #fff;
     padding: 8px 16px;
     z-index: 2;
-    transition: top 0.3s ease;
+    transition: var(--transition-top);
     font-size: 14px;
     border-radius: 4px;
     text-decoration: none;
@@ -142,7 +153,14 @@ html {
 .skip-link:focus {
     top: 50px;
 }
+
 .no-scroll {
-  overflow: hidden;
-  height: 100svh;
+    overflow: hidden;
+    height: 100svh;
+}
+
+@media (min-width:1600px) {
+    .main {
+        max-width: 1400px;
+    }
 }

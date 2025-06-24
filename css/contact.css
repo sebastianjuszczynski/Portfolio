@@ -1,7 +1,7 @@
 .section__contact {
     background-color: var(--gradient-accent);
     margin: var(--margin-lg);
-    padding: var(--padding-base);
+    padding: var(--padding-xl);
     text-align: center;
 }
 
@@ -38,7 +38,7 @@
 
 input,
 textarea {
-    padding: var(--padding-xs);
+    padding: var(--padding-base);
     font-weight: 600;
     border-radius: var(--radius-lg);
     background-color: var(--bg-inputs);
@@ -87,13 +87,12 @@ textarea:focus {
     border-radius: var(--radius-full);
     border: none;
     text-transform: uppercase;
-    transition: background-color .4s ease-in-out;
     font-size: var(--font-size-base);
 }
 
 .form__status {
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    transition: var(--transition-opacity);
     text-align: left;
     font-weight: bold;
 }
@@ -110,7 +109,7 @@ textarea:focus {
     font-size: 0.85rem;
     text-align: left;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    transition: var(--transition-opacity);
 }
 
 .error-message.visible {
@@ -139,7 +138,7 @@ input:-moz-autofill {
         inset: 0;
         background: var(--gradient-accent-hover);
         opacity: 0;
-        transition: opacity 0.4s ease-in-out;
+        transition: var(--transition-opacity);
         z-index: -1;
     }
 

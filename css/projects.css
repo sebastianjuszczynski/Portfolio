@@ -1,7 +1,7 @@
 .section__projects {
     background-color: var(--bg-secondary);
     margin: var(--margin-lg);
-    padding: var(--padding-base);
+    padding: var(--padding-xl);
     text-align: center;
 }
 
@@ -17,9 +17,9 @@
     justify-content: center;
     align-items: flex-start;
     gap: var(--gap-lg);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-base);
     background: var(--bg-main);
-    padding: var(--padding-base);
+    padding: var(--padding-xl);
     margin-bottom: var(--margin-bottom-lg);
 }
 
@@ -146,7 +146,7 @@
         object-fit: cover;
         width: 100%;
         max-width: 300px;
-        transition: transform 0.6s ease;
+        transition: var(--transition-transform);
     }
 
     .section__projects-card:hover .section__projects-image {
@@ -160,7 +160,7 @@
     .section__projects-tech--icon {
         width: 20px;
         height: 20px;
-        transition: transform .4s ease-in;
+        transition: var(--transition-transform);
     }
 
     .section__projects-tech--icon:hover {
@@ -168,7 +168,7 @@
     }
 
     .section__projects-link {
-        transition: color .4s ease-in-out;
+        transition: var(--transition-color);
         font-size: var(--font-size-base);
     }
 

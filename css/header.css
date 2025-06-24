@@ -5,7 +5,7 @@
   right: 0;
   height: 80px;
   background-color: var(--bg-transparent);
-  transition: background-color 0.3s, color 0.4s;
+  transition: var(--transition-all);
   z-index: 2;
 }
 
@@ -40,7 +40,7 @@
   margin: 0;
   opacity: 0;
   transform: translateX(100%);
-  transition: var(--transition-base);
+  transition: var(--transition-all);
 }
 
 .header__menu--open {
@@ -61,8 +61,8 @@
   text-decoration: none;
   color: var(--bg-secondary);
   font-size: var(--font-size-lg);
-  padding: var(--padding-sm);
-  transition: color .3s ease-in-out;
+  padding: var(--padding-lg);
+  transition: var(--transition-color);
   white-space: nowrap;
 }
 
@@ -70,17 +70,13 @@
   color: var(--color-accent-hover);
 }
 
-.header__menu-link::after {
-  display: none;
-}
-
 .header__controls {
   gap: var(--gap-sm);
-  padding: var(--padding-xs);
+  padding: var(--padding-base);
 }
 
 .theme-icon {
-  transition: opacity 0.4s, transform 0.4s;
+  transition: var(--transition-all);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -114,7 +110,7 @@ body.light-theme .theme-icon--moon {
   border: none;
   color: var(--color-accent);
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: var(--transition-color);
   overflow: hidden;
   outline: none;
 }
@@ -158,7 +154,7 @@ body.light-theme .theme-icon--moon {
 }
 
 .lang-option {
-  padding: var(--padding-xxs);
+  padding: var(--padding-sm);
   cursor: pointer;
   gap: var(--gap-sm);
 }
@@ -196,7 +192,7 @@ body.light-theme .theme-icon--moon {
   }
 
   .lang-option {
-    padding: var(--padding-xxxs);
+    padding: var(--padding-xs);
   }
 }
 
@@ -232,10 +228,10 @@ body.light-theme .theme-icon--moon {
   .header__menu-link {
     position: relative;
     font-size: var(--font-size-sm);
-    padding: var(--padding-sm);
-    transition: color .4s ease-in-out;
+    padding: var(--padding-lg);
     color: var(--color-text-main);
-    transition: color .3s ease-in-out;
+    transition: var(--transition-color);
+    
   }
 
   .header__menu-link::after {
@@ -248,7 +244,7 @@ body.light-theme .theme-icon--moon {
     height: 2px;
     background: var(--gradient-accent-hover);
     transform: scaleX(0);
-    transition: transform .3s ease-in-out;
+    transition: var(--transition-transform);
   }
 
   .header__menu-link.line-grow::after {
@@ -272,7 +268,7 @@ body.light-theme .theme-icon--moon {
 
   .lang-option {
     padding: 2px 4px;
-    transition: background-color .3s ease-in-out;
+    transition: var(--transition-bg);
   }
 
   .lang-option:hover {

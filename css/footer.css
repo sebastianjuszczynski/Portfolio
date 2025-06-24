@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    padding: var(--padding-base);
+    padding: var(--padding-xl);
     background-color: var(--bg-menu-mobile);
 }
 
@@ -27,7 +27,7 @@
 .footer__nav {
     font-size: var(--font-size-base);
     list-style: none;
-    padding: var(--padding-xs);
+    padding: var(--padding-base);
     gap: var(--gap-sm);
     margin: var(--margin-base);
 }
@@ -36,7 +36,7 @@
     text-decoration: none;
     color: var(--color-text-white);
     font-weight: 300;
-    transition: color 0.4s ease-in-out;
+    transition: var(--transition-color);
     white-space: nowrap;
 }
 
@@ -73,7 +73,7 @@
     font-size: var(--font-size-base);
     text-decoration: none;
     padding: 0;
-    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out, opacity .4s ease-in-out, visibility 0.4s ease-in-out;
+    transition: var(--transition-all);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -87,7 +87,6 @@
 
 .arrow__up-wrapper.blurred {
     opacity: 0.3;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .footer__icon-wrapper {
@@ -100,7 +99,7 @@
     height: 30px;
     border: 1px solid var(--color-text-white);
     border-radius: 50%;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: var(--transition-all);
 }
 
 .footer__icon-wrapper::before {
@@ -113,7 +112,7 @@
     transform: scale(0);
     opacity: 0.4;
     z-index: 0;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: var(--transition-all);
 }
 
 .footer__icon-wrapper .fab {
@@ -164,7 +163,7 @@
         flex-direction: row;
         justify-content: space-around;
         width: 90%;
-        margin-bottom: var(--margin-bottom-xl);
+        margin-bottom: var(--margin-bottom-lg);
     }
 
     .footer__nav-container {

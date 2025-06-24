@@ -20,7 +20,7 @@
 .fab {
     z-index: 1;
     color: var(--color-accent);
-    transition: color 0.3s ease;
+    transition: var(--transition-color);
 }
 
 .social__icon {
@@ -37,7 +37,7 @@
     height: 30px;
     border: 1px solid var(--color-accent);
     border-radius: 50%;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: var(--transition-all);
 }
 
 .icon__wrapper::before {
@@ -50,7 +50,7 @@
     transform: scale(0);
     opacity: 0.4;
     z-index: 0;
-    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    transition: var(--transition-all);
 }
 
 .icon__wrapper:hover::before {
@@ -73,13 +73,12 @@
 
 .section__title {
     display: block;
+    font-size: var(--font-size-xxl);
     background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    font-weight: bold;
-    font-size: var(--font-size-xxl);
     margin: 0;
 }
 

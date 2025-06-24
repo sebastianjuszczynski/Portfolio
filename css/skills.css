@@ -1,7 +1,7 @@
 .section__skills {
     background-color: var(--bg-transparent);
     margin: var(--margin-lg);
-    padding: var(--padding-base);
+    padding: var(--padding-xl);
     text-align: center;
 }
 
@@ -54,7 +54,7 @@
 
     .section__skills-item {
         flex: 0 0 calc(16.66% - 1rem);
-        transition: transform .4s ease-in-out;
+        transition: var(--transition-transform);
     }
 
     .section__skills-item:hover {
