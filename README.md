@@ -27,9 +27,49 @@ A fully responsive, accessible and lightweight portfolio website built with vani
 - **IntersectionObserver API** – scroll spy and dynamic section highlighting  
 - **localStorage** – theme and language preferences  
 
+## 💡 SCSS Structure
+
+The project uses modular SCSS architecture.  
+Each section (header, hero, about, skills, projects, etc.) has its own file.  
+These are imported into `main.scss`, which is compiled and minified into `main.min.css` using [Live Sass Compiler](https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass).
+
+Only `main.min.css` is used in the final build (referenced in `index.html`).
+
+
 ## Folder structure
 Portfolio/
-
+├── assets/
+│ ├── gifs/
+│ ├── icons/
+│ └── images/
+│ └── video/
+├── css/
+│ ├── about.scss
+│ ├── contact.scss
+│ ├── footer.scss
+│ ├── global.scss
+│ ├── hamburgers.scss
+│ ├── header.scss
+│ ├── hero.scss
+│ ├── main.scss # SCSS entry file
+│ ├── main.min.css # Compiled + minified CSS used in production
+│ ├── projects.scss
+│ ├── skills.scss
+│ └── utilities.scss
+├── js/
+│ ├── app.js
+│ ├── form/
+│ │ └── formFields.js
+│ ├── i18n.js
+│ ├── projects.js
+│ ├── renderForm.js
+│ ├── renderProjects.js
+│ ├── renderSkills.js
+│ ├── scrollReveal.js
+│ ├── skills.js
+│ └── utils.js
+├── index.html
+└── README.md
 
 
 ## How to Use Locally
