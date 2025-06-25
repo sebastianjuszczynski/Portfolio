@@ -9,10 +9,14 @@ export const renderProjects = () => {
 
     const lang = getCurrentLang();
 
-    const html = projects.map(({ title, description, image, tech, link }) => `
+    const html = projects.map(({ title, description, image, video, tech, link }) => `
     <div class="section__projects-card scroll__reveal-card">
-                        <img class="section__projects-image" src="${image}"
+                        <img class="section__projects-image static" src="${image}"
                             alt="${title}" loading="lazy" />
+                        <video class="section__projects-video" muted preload="none" loop playsinline>
+                            <source src="${video}" type="video/mp4" />
+                             Your browser does not support the video tag.
+                        </video>
                         <div class="section__projects-content">
                             <h3 class="section__projects-title">${title}</h3>
                             <p class="section__projects-description">${description[lang]}</p>
@@ -36,4 +40,18 @@ export const renderProjects = () => {
 
     container.innerHTML = html;
     applyScrollRevealToNewCards();
+
+    document.querySelectorAll('.section__projects-card').forEach(card => {
+        const video = card.querySelector('.section__projects-video');
+        if (!video) return;
+
+        card.addEventListener('mouseenter', () => {
+            video.currentTime = 0;
+            video.play();
+        });
+
+        card.addEventListener('mouseleave', () => {
+            video.pause();
+        });
+    });
 }
