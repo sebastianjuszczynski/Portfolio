@@ -15,7 +15,7 @@ export const renderFormFields = () => {
                             <label for="${name}" class="contact__form-visually--hidden">${placeholder[lang]}</label>
                             <input type="${type}" name="${name}" id="${name}" required data-i18n-placeholder="${i18n}"
                                 placeholder="${placeholder[lang]}">
-                            <small class="error-message"></small>
+                            <small class="error-message" aria-live="polite"></small>
                         </div>
         `)
         .join("");

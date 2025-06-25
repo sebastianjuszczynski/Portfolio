@@ -65,10 +65,12 @@
 .section__subheader {
     font-size: var(--font-size-sm);
     margin-bottom: 0;
+    font-weight: 900;
 }
 
 .section__subheader-span {
-    color: var(--color-accent)
+    color: var(--color-accent);
+    font-weight: 300;
 }
 
 .section__title {

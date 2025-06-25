@@ -11,6 +11,12 @@
     gap: var(--gap-xl);
 }
 
+.section__projects-card--container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
 .section__projects-card {
     display: flex;
     flex-direction: column;
@@ -117,12 +123,6 @@
 }
 
 @media (min-width: 1024px) {
-    .section__projects-card--container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .section__projects-card {
         flex: 0 0 calc(33.3% - 2rem);
         margin-right: 2rem;
@@ -130,15 +130,6 @@
 
     .section__projects-content {
         text-align: left;
-    }
-
-    .section__projects-step {
-        margin-bottom: var(--margin-bottom-sm);
-    }
-
-    .section__projects-heading {
-        font-size: var(--font-size-xl);
-        margin: var(--margin-base);
     }
 
     .section__projects-image {

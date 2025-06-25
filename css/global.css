@@ -10,7 +10,9 @@
     --color-text-main: #FAFAFA;
     --color-text-secondary: #7f7985;
     --color-text-white: #FFFFFF;
-
+    --color-error: #e53935;
+    --color-valid: #4caf50;
+    
     /* ========== COLORS: BRAND / ACCENTS ========== */
     --color-accent: #FFFFFF;
     --color-accent-hover: #A880F9;
@@ -82,6 +84,11 @@
     --padding-button: .5rem;
     --padding-image: 2rem .625rem;
     /* ========== BORDERS ========== */
+    --outline-focus: 2px solid var(--color-accent-hover);
+    --border-error: 2px solid var(--color-error);
+    --outline-error: 2px solid var(--color-error);
+    --border-valid: 2px solid var(--color-valid);
+    --outline-valid: 2px solid var(--color-valid);
     --radius-sm: .25rem;
     --radius-base: .5rem;
     --radius-lg: 1rem;

@@ -78,6 +78,10 @@
     visibility: hidden;
     pointer-events: none;
 }
+.arrow__up-wrapper:focus {
+    outline: var(--outline-focus);
+    outline-offset: 4px;
+}
 
 .arrow__up-wrapper.active {
     opacity: 1;

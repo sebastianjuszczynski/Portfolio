@@ -52,15 +52,23 @@ textarea {
 
 input:focus,
 textarea:focus {
-    outline: none;
+    outline: var(--outline-focus);
 }
 
 .input-error {
-    border: 2px solid #e53935;
+    border: var(--border-error);
+}
+
+.input-error:focus {
+    outline: var(--outline-error);
 }
 
 .input-valid {
-    border: 2px solid #4caf50;
+    border: var(--border-valid);
+}
+
+.input-valid:focus {
+    outline: var(--outline-valid);
 }
 
 .contact__form-visually--hidden {
@@ -103,6 +111,7 @@ textarea:focus {
 
 .error-message {
     display: block;
+    visibility: hidden;
     min-height: 1rem;
     line-height: 1rem;
     color: #e53935;
@@ -113,6 +122,7 @@ textarea:focus {
 }
 
 .error-message.visible {
+    visibility: visible;
     opacity: 1;
 }
 
@@ -123,6 +133,7 @@ textarea:-webkit-autofill {
     background-color: #161616 !important;
     color: #989898 !important;
     -webkit-text-fill-color: #989898 !important;
+    /* Prevent autofill background flash in Chrome */
     transition: background-color 9999s ease-in-out 0s;
 }
 
