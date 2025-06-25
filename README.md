@@ -52,7 +52,7 @@ open index.html  # or just double-click the file in your file manager
 
 ## Demo GIFs (replace these with your own!)
 ### 🌙 Theme toggle (Light / Dark)
-![Example](https://github.com/sebastianjuszczynski/Portfolio/assets/video/light-dark.mp4)
+![Theme toggle demo](assets/video/light-dark.gif)
 ### 📱 Mobile menu animation
 
 ### 🌍 Language switch (EN/PL)
