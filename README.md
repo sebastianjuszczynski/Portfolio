@@ -52,14 +52,15 @@ open index.html  # or just double-click the file in your file manager
 
 ## Demo GIFs (replace these with your own!)
 ### 🌙 Theme toggle (Light / Dark)
-![Theme toggle demo](assets/video/light-dark.gif)
+![Theme toggle demo](assets/gifs/light-dark.gif)
 ### 📱 Mobile menu animation
-
+![Mobile menu animation demo](assets/gifs/mobileMenu.gif)
 ### 🌍 Language switch (EN/PL)
-
+![Language switch demo](assets/gifs/langSwitch.gif)
 ### ✉️ Contact form with validation
-
+![Contact form with validation demo](assets/gifs/form.gif)
 ### 🧝‍♂️ Scroll Spy & Animations
+![Scroll Spy & Animations demo](assets/gifs/animations.gif)
 
 ## Known Issues
 - The project uses only vanilla technologies, so animations on very low-end devices may vary slightly.
