@@ -37,6 +37,7 @@ Only `main.min.css` is used in the final build (referenced in `index.html`).
 
 
 ## Folder structure
+```
 Portfolio/
 ├── assets/
 │ ├── gifs/
@@ -57,19 +58,23 @@ Portfolio/
 │ ├── skills.scss
 │ └── utilities.scss
 ├── js/
-│ ├── app.js
+│ ├── app.js #JS entry file
 │ ├── form/
-│ │ └── formFields.js
+│ │ └── contact.js
+│ │ └── formSubmit.js
+│ │ └── formValidation.js
 │ ├── i18n.js
 │ ├── projects.js
-│ ├── renderForm.js
 │ ├── renderProjects.js
+│ ├── formFields.js
+│ ├── renderForm.js
+│ ├── skills.js
 │ ├── renderSkills.js
 │ ├── scrollReveal.js
-│ ├── skills.js
 │ └── utils.js
 ├── index.html
 └── README.md
+```
 
 
 ## How to Use Locally
