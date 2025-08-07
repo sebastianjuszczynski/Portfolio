@@ -25,7 +25,6 @@
             #25153F 60%,
             #0F0715 80%,
             #25153F 100%);
-    --bg-hero-image: #0B1013;
     --bg-transparent: transparent;
     --bg-menu-mobile: #2A1454;
     --bg-header-scrolled: rgba(0, 0, 0, 0.8);
@@ -44,7 +43,7 @@
     /* ========== TYPOGRAPHY ========== */
     --font-family: 'Inter', sans-serif;
     --font-family-logo: 'Orbitron', sans-serif;
-    --font-size-base: 16px;
+    --font-size-base: 1rem;
     --font-size-sm: 0.875rem;
     --font-size-lg: 1.5rem;
     --font-size-xl: 2rem;
@@ -82,7 +81,6 @@
     --padding-header-nav: 0 1rem;
     --padding-tech-icons: .5rem .6rem;
     --padding-button: .5rem;
-    --padding-image: 2rem .625rem;
     /* ========== BORDERS ========== */
     --outline-focus: 2px solid var(--color-accent-hover);
     --border-error: 2px solid var(--color-error);
